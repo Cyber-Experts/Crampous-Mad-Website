@@ -1,0 +1,133 @@
+/*
+Theme Name: Bon Appetit
+Theme URI: http://bonappetit.stylemixthemes.com/
+Author: StylemixThemes
+Author URI: http://stylemixthemes.com/
+Description: Bon Appetit is a Responsive Premium WordPress Theme for Restaurants. It has simple yet more than sufficient functionality. It supports WPML, it has many options for menu display and the design is just a delight. It is the best choice for the website of your Restaurant, Cafe, Bakery, Bar or Coffee shop. It’s fully Responsive and Easy to Customize using Drag & Drop Visual Composer.
+Version: 4.2.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bon_appetit
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, fluid-layout, fixed-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Bon Appetit is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/* Imports */
+
+/* jQuery UI */
+@import "jquery-ui.min.css";
+
+/* Font awesome */
+@import "jquery.fancybox.css";
+
+/* UI Time picker */
+@import "jquery.ui.timepicker.css";
+
+/* Extensions styles */
+@import "main.css";
+
+/* Font awesome */
+@import "font-awesome.min_1.css";
+
+/* Icon moon */
+@import "iconmoon.css";
+
+/* Live customizer */
+@import "frontend_customizer.css";
+
+/* Color Schemes */
+@import "color-shemes.css";
+
+/* Color Schemes */
+@import "vc.css";
+
+/* Custom styles */
+@import "style_1.css";
+
+/* Media */
+@import "media.css";
+
+/* GRAVINDA */
+.site-logo img {
+    max-height: 65px;
+}
+
+.entry-header h1
+{
+	color:#076993 !important;
+}
+
+body .footer-widgets_area .widget-title
+{
+	color: #076993;
+}
+
+.footer-widgets_area
+{
+	text-align:center;
+}
+
+.footer-widgets_area > .widget
+{
+	text-align:left;
+}
+
+/* SLIDER */
+.title-top-bottom-divider
+{
+	border-color: #262559 !important;
+}
+
+/* dishList */
+.dish-list_default .dl-title_text
+{
+	color: #076993;
+}
+
+/* icones */
+body.scheme-custom .form-field .ic-phone
+{
+	color: #262559;
+}
+
+.form-field .ic-phone:before {
+    content: "\e942";
+    font-size: 16px;
+}
+
+.form-field .ic-phone{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+/* FOOTER */
+.footer-widgets_area
+{
+	padding: 40px;
+}
+.site-info {
+    margin-top: 10px;
+}
+
+.comment-respond_wrap {
+    background: #076993;
+}
+
+body .comment-respond .comment-reply-title  {
+    color: white;
+}
+
+.stm_drecipe_link
+{
+	display: none;
+}

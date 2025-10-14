@@ -1,15 +1,44 @@
 @import "tailwindcss";
 
+@theme {
+  --font-display: "Berkshire Swash", "serif";
+  --font-body: "Lora", "serif";
+  --font-sans: "Open Sans", "sans-serif";
+  --breakpoint-3xl: 120rem;
+  
+  /* Blue color palette */
+  --color-blue-100: oklch(0.99 0.01 240);
+  --color-blue-200: oklch(0.95 0.05 240);
+  --color-blue-300: oklch(0.90 0.10 240);
+  --color-blue-400: oklch(0.80 0.15 240);
+  --color-blue-500: oklch(0.70 0.20 240);
+  --color-blue-600: oklch(0.60 0.25 240);
+  --color-blue-700: oklch(0.50 0.30 240);
+  --color-blue-800: oklch(0.40 0.35 240);
+  --color-blue-900: oklch(0.30 0.40 240);
+  
+  /* Brand colors */
+  --color-primary: oklch(0.45 0.25 240); /* #076993 equivalent */
+  --color-secondary: oklch(0.25 0.20 240); /* #262559 equivalent */
+  --color-accent: oklch(0.85 0.15 60); /* #e3ad47 equivalent */
+  
+  /* Easing functions */
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +51,56 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Local font faces from /fonts */
+@font-face {
+  font-family: "Defaults";
+  src: url("/fonts/Defaults.woff") format("woff"), url("/fonts/Defaults.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BerkshireLocal";
+  src: url("/fonts/Defaults.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Typography */
+.title-top-bottom-divider {
+  font-family: var(--font-display);
+}
+
+.widget-title {
+  font-family: var(--font-body);
+}
+
+/* Custom utility classes */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
 }
