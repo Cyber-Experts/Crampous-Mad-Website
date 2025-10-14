@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -103,4 +104,36 @@ body {
 
 .bg-accent {
   background-color: var(--color-accent);
+}
+
+/* Override template styles that interfere */
+.tp-caption {
+  display: none !important;
+}
+
+.title-top-bottom-divider {
+  font-family: "Berkshire Swash", serif !important;
+  font-size: 3.5rem !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+  color: white !important;
+  border-top: 2px solid #e3ad47 !important;
+  border-bottom: 2px solid #e3ad47 !important;
+  padding: 1rem 1.5rem !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+/* Ensure our hero slider styles take precedence */
+.hero-slider h2 {
+  font-family: "Berkshire Swash", serif !important;
+  font-size: 3.5rem !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+  color: white !important;
+  border-top: 2px solid #e3ad47 !important;
+  border-bottom: 2px solid #e3ad47 !important;
+  padding: 1rem 1.5rem !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
 }

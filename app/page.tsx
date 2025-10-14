@@ -30,33 +30,42 @@ export default function Home() {
       {/* Section Bienvenue */}
       <section id="start-section" className="max-w-6xl mx-auto px-6 py-16 text-center bg-white">
         <h2 className="text-primary text-5xl mb-6 font-display">Bienvenue chez Crampous Mad</h2>
+        
+        {/* Logo au centre */}
+        <div className="flex justify-center mb-8">
+          <img src="/images/logo-sans-fond-ni-date.png" alt="Crampous Mad" className="h-24 w-auto" />
+        </div>
+        
         <div className="flex flex-col md:flex-row gap-10 justify-center">
           <div className="md:w-1/3">
             <img src="/images/Crampous-Mad-2.jpg" alt="Notre histoire" className="w-full h-auto rounded shadow-lg" />
             <h3 className="italic text-[24px] leading-[30px] text-accent mt-4 font-body">Notre histoire</h3>
-            <p className="text-sm leading-6 mt-2 font-sans">
+            <p className="text-sm leading-6 mt-2 font-sans text-gray-800">
               Depuis son ouverture le 26 septembre 1980 la crêperie Crampous Mad est l'union culinaire entre l'Alsace et la Bretagne. Les années passent…
             </p>
           </div>
           <div className="md:w-1/3">
-            <img src="/images/F17A4522-570x460.jpg" alt="Le restaurant" className="w-full h-auto rounded shadow-lg" />
+            <img src="/images/façade.jpg" alt="Le restaurant" className="w-full h-auto rounded shadow-lg" />
             <h3 className="italic text-[24px] leading-[30px] text-accent mt-4 font-body">Le restaurant</h3>
-            <p className="text-sm leading-6 mt-2 font-sans">
+            <p className="text-sm leading-6 mt-2 font-sans text-gray-800">
               Découvrez la nouvelle ambiance authentique et conviviale, dans une ancienne maison alsacienne du 16ème siècle.
             </p>
           </div>
           <div className="md:w-1/3">
-            <img src="/images/Crampous-Mad-3.jpg" alt="L'équipe" className="w-full h-auto rounded shadow-lg" />
+            <img src="/images/Crampous_mad_associes.jpg" alt="L'équipe" className="w-full h-auto rounded shadow-lg" />
             <h3 className="italic text-[24px] leading-[30px] text-accent mt-4 font-body">L'équipe</h3>
-            <p className="text-sm leading-6 mt-2 font-sans">
+            <p className="text-sm leading-6 mt-2 font-sans text-gray-800">
               Françoise, David et toute l'équipe vous accueillent avec le sourire et assurent un service en continu.
             </p>
           </div>
         </div>
-        <div className="mt-10 flex items-center gap-4">
-          <span className="flex-1 h-px bg-secondary" />
-          <Link href="/notre-creperie" className="italic text-primary font-body hover:text-blue-600 transition-colors">Qui sommes-nous ?</Link>
-          <span className="flex-1 h-px bg-secondary" />
+        <div className="mt-10 flex justify-center">
+          <Link 
+            href="/notre-creperie" 
+            className="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-body font-medium transition-colors inline-block"
+          >
+            Qui sommes-nous ?
+          </Link>
         </div>
       </section>
 
@@ -108,13 +117,13 @@ export default function Home() {
               <Link href="/blog" className="text-primary hover:underline font-body">Lire la suite</Link>
             </article>
             <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <img src="/images/noel-2015-a-mulhouse-la-foire-enchantee-45619-470-0.jpg" alt="Noël 2015" className="w-full h-48 object-cover rounded mb-4" />
+              <img src="/images/noel-2015-a-mulhouse-la-patinoire-enchantee-45619-470-0.jpg" alt="Noël 2015" className="w-full h-48 object-cover rounded mb-4" />
               <h3 className="text-xl font-body font-semibold mb-2 text-secondary">Noël 2015 à Mulhouse</h3>
               <p className="text-gray-600 text-sm mb-4 font-sans">La foire enchantée et notre participation.</p>
               <Link href="/blog" className="text-primary hover:underline font-body">Lire la suite</Link>
             </article>
             <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <img src="/images/carnaval-de-mulhouse-cha-ce-reunion-58533-470-0.jpg" alt="Carnaval" className="w-full h-48 object-cover rounded mb-4" />
+              <img src="/images/carnaval-de-mulhouse-chars-place-reunion-58533-470-0.jpg" alt="Carnaval" className="w-full h-48 object-cover rounded mb-4" />
               <h3 className="text-xl font-body font-semibold mb-2 text-secondary">Carnaval de Mulhouse</h3>
               <p className="text-gray-600 text-sm mb-4 font-sans">Chaîne de réunion traditionnelle.</p>
               <Link href="/blog" className="text-primary hover:underline font-body">Lire la suite</Link>

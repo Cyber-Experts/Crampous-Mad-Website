@@ -29,7 +29,7 @@ export default function HeroSlider({ slides, intervalMs = 5000 }: HeroSliderProp
   const current = slides[index];
 
   return (
-    <section className="relative h-[70vh] min-h-[420px] w-full overflow-hidden">
+    <section className="hero-slider relative h-[70vh] min-h-[420px] w-full overflow-hidden">
       {slides.map((s, i) => (
         <div
           key={i}
@@ -44,7 +44,12 @@ export default function HeroSlider({ slides, intervalMs = 5000 }: HeroSliderProp
       <div className="absolute inset-0 bg-black/35" />
 
       <div className="relative z-10 h-full max-w-6xl mx-auto px-6 flex flex-col items-center justify-center text-center">
-        <h2 className="text-white text-4xl md:text-6xl font-normal border-y border-[#e3ad47] py-4 px-6 inline-block">
+        {/* Logo au centre */}
+        <div className="mb-8">
+          <img src="/images/logo-sans-fond-ni-date.png" alt="Crampous Mad" className="h-20 w-auto mx-auto" />
+        </div>
+        
+        <h2 className="text-white text-4xl md:text-6xl font-normal border-y border-[#e3ad47] py-4 px-6 inline-block" style={{fontFamily: 'Berkshire Swash, serif'}}>
           {current.title}
         </h2>
         {current.ctaHref && current.ctaLabel ? (
