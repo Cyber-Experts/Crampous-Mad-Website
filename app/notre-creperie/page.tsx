@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import StatsSection from "../components/StatsSection";
+import BottomSeparator from "../components/BottomSeparator";
+import TopSeparator from "../components/SectionSeparator";
+import CreperieChiffres from "../components/CreperieChiffres";
 
 export default function NotreCreperiePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -73,9 +75,11 @@ export default function NotreCreperiePage() {
             <div className="w-16 h-0.5 bg-white"></div>
           </div>
         </div>
+        {/* Séparateur en bas du header */}
+        <BottomSeparator color="#ffffff" overlay={true} />
       </header>
 
-      <section className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+      <section className="max-w-5xl mx-auto px-6 py-2 grid md:grid-cols-2 gap-10">
         <div>
           <h2 className="text-[#076993] text-3xl mb-6">La crêperie Crampous Mad</h2>
           <p className="text-[#262559] font-semibold mb-4">
@@ -118,8 +122,11 @@ export default function NotreCreperiePage() {
         </div>
       </section>
 
-      <section className="bg-[#076993] text-white">
-        <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+      <section className="bg-[#076993] text-white relative overflow-hidden">
+        {/* Séparateur en haut de la section */}
+        <TopSeparator color="#ffffff" />
+        
+        <div className="max-w-5xl mx-auto px-6 py-2 grid md:grid-cols-2 gap-10">
           <div className="flex items-center">
             <div className="relative w-full h-[400px] overflow-hidden bg-white">
               {productImages.map((image, index) => (
@@ -166,9 +173,12 @@ export default function NotreCreperiePage() {
             </p>
           </div>
         </div>
+        
+        {/* Séparateur en bas de la section */}
+        <BottomSeparator color="#ffffff" />
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+      <section className="max-w-5xl mx-auto px-6 py-2 grid md:grid-cols-2 gap-10">
         <div>
           <h2 className="text-[#076993] text-4xl mb-6">Notre histoire</h2>
           <p className="text-justify mb-4">
@@ -219,7 +229,7 @@ export default function NotreCreperiePage() {
         </div>
       </section>
 
-      <StatsSection />
+      <CreperieChiffres />
     </main>
   );
 }

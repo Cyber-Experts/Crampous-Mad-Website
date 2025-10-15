@@ -12,14 +12,14 @@ export default function BottomSeparator({
   const separatorId = "row-bottom-separator_461";
   
   return (
-    <div className={`w-full h-[7.5px] ${overlay ? 'absolute z-10' : ''} bottom-0 ${className}`}>
-      <svg x="0px" y="0px" width="100%" height="7.5px" className="w-full h-full">
+    <div className={`w-full h-[8px] ${overlay ? 'absolute z-10' : ''} bottom-0 ${className}`}>
+      <svg x="0px" y="0px" width="100%" height="8px" className="w-full h-full">
         <defs>
-          <pattern id={separatorId} x="0" y="0" width="15" height="7.5" patternUnits="userSpaceOnUse">
-            <path fillRule="evenodd" clipRule="evenodd" fill={color} d="M0,7.5 L15,7.5 L7.5,0 Z"></path>
+          <pattern id={separatorId} x="0" y="0" width="15" height="8" patternUnits="userSpaceOnUse">
+            <path fillRule="evenodd" clipRule="evenodd" fill={color} d="M0,8 L15,8 L7.5,0 Z"></path>
           </pattern>
         </defs>
-        <rect x="0" y="0" width="100%" height="7.5" fill={`url(#${separatorId})`}></rect>
+        <rect x="0" y="0" width="100%" height="8" fill={`url(#${separatorId})`}></rect>
       </svg>
     </div>
   );
