@@ -57,9 +57,9 @@ export default function BlogPage() {
           style={{ backgroundImage: `url('/images/bandeau_3-1.png')` }}
         />
         <div className="relative z-10 h-full flex flex-col items-center justify-center">
-          <h1 className="text-white text-4xl md:text-5xl font-display mb-6" style={{fontFamily: 'Berkshire Swash, serif'}}>
-            L'actu
-          </h1>
+        <h1 className="text-white text-4xl md:text-5xl font-berkshire mb-6">
+          L'actu
+        </h1>
           
           {/* Barre avec losange */}
           <div className="flex items-center">
@@ -87,29 +87,29 @@ export default function BlogPage() {
                 
                 {/* Contenu avec design carré - flex pour aligner les boutons */}
                 <div className="p-4 flex flex-col flex-grow">
-                  <h3 className="text-lg font-body font-semibold mb-2 text-[#262559]" style={{ fontFamily: 'Lora, serif' }}>
-                    <Link href={post.href} className="hover:text-[#076993] transition-colors">
-                      {post.title}
-                    </Link>
-                  </h3>
+          <h3 className="text-lg font-lora font-semibold mb-2 text-[#262559]">
+            <Link href={post.href} className="hover:text-[#076993] transition-colors">
+              {post.title}
+            </Link>
+          </h3>
                   
                   {/* Date et heure */}
                   <div className="flex items-center justify-center mb-3">
                     <div className="w-6 h-0.5 bg-[#076993]"></div>
-                    <div className="px-2 text-xs text-[#076993] font-medium text-center">
+                    <div className="px-2 text-xs text-[#076993] font-open-sans font-medium text-center">
                       {post.date}<br/>{post.time}
                     </div>
                     <div className="w-6 h-0.5 bg-[#076993]"></div>
                   </div>
                   
-                  <p className="text-gray-600 text-sm mb-4 font-sans leading-relaxed flex-grow">
+                  <p className="text-gray-600 text-sm mb-4 font-open-sans leading-relaxed flex-grow">
                     {post.excerpt}
                   </p>
                   
                   {/* Bouton carré avec style du site - aligné en bas */}
                   <Link 
                     href={post.href} 
-                    className="inline-block bg-[#262559] hover:bg-[#076993] text-white px-4 py-2 text-sm font-body font-medium transition-colors duration-300 border-2 border-[#262559] hover:border-[#076993] mt-auto"
+                    className="inline-block bg-[#262559] hover:bg-[#076993] text-white px-4 py-2 text-sm font-lora font-medium transition-colors duration-300 border-2 border-[#262559] hover:border-[#076993] mt-auto"
                   >
                     Lire la suite
                   </Link>

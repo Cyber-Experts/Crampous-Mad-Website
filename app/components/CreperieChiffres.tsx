@@ -97,7 +97,7 @@ export default function CreperieChiffres() {
       
       <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-display mb-4" style={{fontFamily: 'Berkshire Swash, serif'}}>
+          <h2 className="text-4xl md:text-5xl font-berkshire mb-4">
             La crêperie en chiffres
           </h2>
           <div className="w-24 h-1 bg-white mx-auto"></div>
@@ -115,7 +115,7 @@ export default function CreperieChiffres() {
                   {stat.label.includes('Couverts') && counters.covers}
                   {stat.label.includes('Fans') && counters.fans}
                 </div>
-                <div className="text-lg text-white/90">
+                <div className="text-lg text-white/90 font-open-sans">
                   {stat.label}
                 </div>
               </div>

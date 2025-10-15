@@ -10,7 +10,7 @@ export default function ReservationPage() {
           style={{ backgroundImage: `url('/images/bandeau_3-1.png')` }}
         />
         <div className="relative z-10 h-full flex flex-col items-center justify-center">
-          <h1 className="text-white text-4xl md:text-5xl font-display mb-6" style={{fontFamily: 'Berkshire Swash, serif'}}>
+          <h1 className="text-white text-4xl md:text-5xl font-berkshire mb-6">
             Réservation
           </h1>
           
@@ -28,7 +28,7 @@ export default function ReservationPage() {
         <div className="max-w-6xl mx-auto px-6">
           {/* Titre principal avec icône */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-normal text-[#076993] mb-8" style={{fontFamily: 'Berkshire Swash, serif'}}>
+            <h2 className="text-4xl font-normal text-[#076993] mb-8 font-berkshire">
               Toute l'équipe est heureuse de vous accueillir
             </h2>
             
@@ -42,10 +42,10 @@ export default function ReservationPage() {
             </div>
             
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-[#262559] mb-4">
+              <p className="text-lg text-[#262559] mb-4 font-open-sans">
                 Vous pouvez réserver votre table par téléphone ou nous contacter par mail pour l'organisation de vos événements privés.
               </p>
-              <p className="text-lg font-semibold text-[#262559]">
+              <p className="text-lg font-semibold text-[#262559] font-lora">
                 Les crêpes et galettes sont disponibles à emporter.
               </p>
             </div>

@@ -20,7 +20,7 @@ export default function Home() {
           {
             imageSrc: "/images/F17A4546.jpg",
             title: "Découvrez notre carte",
-            ctaHref: "https://crampous-mad.fr/la-carte",
+                  ctaHref: "http://localhost:3000/la-carte",
             ctaLabel: "Découvrir",
           },
           {

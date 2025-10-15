@@ -37,7 +37,7 @@ export default function ContactezNousPage() {
           style={{ backgroundImage: `url('/images/Slider-construction.jpg')` }}
         />
         <div className="relative z-10 h-full flex flex-col items-center justify-center">
-          <h1 className="text-[#076993] text-4xl md:text-5xl font-display mb-6" style={{ fontFamily: 'Berkshire Swash, serif' }}>
+          <h1 className="text-[#076993] text-4xl md:text-5xl font-berkshire mb-6">
             Contactez nous
           </h1>
           
@@ -55,7 +55,7 @@ export default function ContactezNousPage() {
         <div className="max-w-6xl mx-auto px-6">
           {/* Titre avec icône */}
           <div className="text-center mb-16">
-            <h2 className="text-[#076993] text-4xl md:text-5xl font-display mb-8" style={{ fontFamily: 'Berkshire Swash, serif' }}>
+            <h2 className="text-[#076993] text-4xl md:text-5xl font-berkshire mb-8">
               Dites bonjour
             </h2>
             
@@ -77,7 +77,7 @@ export default function ContactezNousPage() {
                 <div className="space-y-6">
                   {/* Nom */}
                   <div className="form-field text-field_wrapper">
-                    <label htmlFor="contact-name" className="block mb-2">
+                    <label htmlFor="contact-name" className="block mb-2 font-lora">
                       <span className="ic-pen text-[#262559] mr-2">
                         <svg className="w-5 h-5 inline" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
@@ -93,13 +93,13 @@ export default function ContactezNousPage() {
                       onChange={handleInputChange}
                       placeholder="Votre nom"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20"
+                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20 font-open-sans"
                     />
                   </div>
 
                   {/* Prénom */}
                   <div className="form-field text-field_wrapper">
-                    <label htmlFor="contact-firstname" className="block mb-2">
+                    <label htmlFor="contact-firstname" className="block mb-2 font-lora">
                       <span className="text-[#262559] mr-2">
                         <svg className="w-5 h-5 inline" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
@@ -115,13 +115,13 @@ export default function ContactezNousPage() {
                       onChange={handleInputChange}
                       placeholder="Votre prénom"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20"
+                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20 font-open-sans"
                     />
                   </div>
 
                   {/* Email */}
                   <div className="form-field text-field_wrapper">
-                    <label htmlFor="contact-email" className="block mb-2">
+                    <label htmlFor="contact-email" className="block mb-2 font-lora">
                       <span className="ic-envelope text-[#262559] mr-2">
                         <svg className="w-5 h-5 inline" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
@@ -138,13 +138,13 @@ export default function ContactezNousPage() {
                       onChange={handleInputChange}
                       placeholder="votre e-mail"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20"
+                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20 font-open-sans"
                     />
                   </div>
 
                   {/* Téléphone */}
                   <div className="form-field text-field_wrapper">
-                    <label htmlFor="contact-phone" className="block mb-2">
+                    <label htmlFor="contact-phone" className="block mb-2 font-lora">
                       <span className="ic-phone text-[#262559] mr-2">
                         <svg className="w-5 h-5 inline" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
@@ -159,13 +159,13 @@ export default function ContactezNousPage() {
                       value={formData.telephone}
                       onChange={handleInputChange}
                       placeholder="Téléphone"
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20"
+                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20 font-open-sans"
                     />
                   </div>
 
                   {/* Sujet */}
                   <div className="form-field text-field_wrapper">
-                    <label htmlFor="contact-city" className="block mb-2">
+                    <label htmlFor="contact-city" className="block mb-2 font-lora">
                       <span className="ic-bug text-[#262559] mr-2">
                         <svg className="w-5 h-5 inline" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"/>
@@ -180,13 +180,13 @@ export default function ContactezNousPage() {
                       value={formData.sujet}
                       onChange={handleInputChange}
                       placeholder="Sujet"
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20"
+                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20 font-open-sans"
                     />
                   </div>
 
                   {/* Message */}
                   <div className="form-field big-text-field_wrapper">
-                    <label htmlFor="contact-message" className="block mb-2">
+                    <label htmlFor="contact-message" className="block mb-2 font-lora">
                       <span className="text-[#262559] mr-2">
                         <svg className="w-5 h-5 inline" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
@@ -201,7 +201,7 @@ export default function ContactezNousPage() {
                       onChange={handleInputChange}
                       placeholder="Message..."
                       rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20 resize-vertical"
+                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#262559] focus:outline-none focus:ring-2 focus:ring-[#262559]/20 resize-vertical font-open-sans"
                     />
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export default function ContactezNousPage() {
                 <div className="mt-8">
                   <button
                     type="submit"
-                    className="w-full bg-[#262559] hover:bg-[#232323] text-white px-8 py-4 text-lg font-medium transition-colors duration-300 border-2 border-[#262559] hover:border-[#232323]"
+                    className="w-full bg-[#262559] hover:bg-[#232323] text-white px-8 py-4 text-lg font-lora font-medium transition-colors duration-300 border-2 border-[#262559] hover:border-[#232323]"
                   >
                     Envoyer
                   </button>

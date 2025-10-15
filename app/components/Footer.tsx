@@ -21,8 +21,8 @@ export default function Footer() {
           <div className="footer-widgets_area grid md:grid-cols-3 gap-8">
             {/* Contact */}
             <aside id="stm_contact-2" className="widget widget_stm_contact">
-              <h1 className="widget-title text-lg mb-6 font-body text-[#076993]">Nous contacter</h1>
-              <ul className="stm_contact_list space-y-3 text-sm text-gray-800">
+              <h1 className="widget-title text-lg mb-6 font-lora font-bold text-[#076993]" style={{ fontSize: '16px', lineHeight: '35px' }}>Nous contacter</h1>
+              <ul className="stm_contact_list space-y-3 text-gray-800 font-open-sans" style={{ fontSize: '13px' }}>
                 <li className="contact-list_item __address flex items-center gap-3">
                   <svg className="w-4 h-4 text-[#076993] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
@@ -47,7 +47,7 @@ export default function Footer() {
             
             {/* Facebook */}
             <aside id="stm_facebook-2" className="widget widget_stm_facebook">
-              <h1 className="widget-title text-lg mb-6 font-body text-[#076993]">Facebook</h1>
+              <h1 className="widget-title text-lg mb-6 font-lora font-bold text-[#076993]" style={{ fontSize: '16px', lineHeight: '35px' }}>Facebook</h1>
               <div className="fb-page-container">
                 <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
                   <div className="flex items-center gap-3 mb-3">
@@ -55,15 +55,15 @@ export default function Footer() {
                       <span className="text-white font-bold text-xs">LC</span>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-gray-800">La Crêperie Cra...</p>
-                      <p className="text-xs text-gray-600">1.7K followers</p>
+                      <p className="text-sm font-medium text-gray-800 font-open-sans">La Crêperie Cra...</p>
+                      <p className="text-xs text-gray-600 font-open-sans">1.7K followers</p>
                     </div>
                   </div>
                   <a 
                     href="https://www.facebook.com/LaCreperieCrampousMad/" 
                     target="_blank" 
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded text-sm font-medium transition-colors border border-gray-300"
+                    className="inline-flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded text-sm font-medium transition-colors border border-gray-300 font-open-sans"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -76,31 +76,31 @@ export default function Footer() {
             
             {/* Schedule */}
             <aside id="stm_schedule-2" className="widget widget_stm_schedule">
-              <h1 className="widget-title text-lg mb-6 font-body text-[#076993]">Service en continu</h1>
-              <ul className="stm_schedule_list space-y-3 text-sm text-gray-800">
+              <h1 className="widget-title text-lg mb-6 font-lora font-bold text-[#076993]" style={{ fontSize: '16px', lineHeight: '35px' }}>Service en continu</h1>
+              <ul className="stm_schedule_list space-y-3 text-gray-800 font-open-sans" style={{ fontSize: '13px' }}>
                 <li className="schedule-list_item flex items-center gap-3">
                   <svg className="w-4 h-4 text-[#076993] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
-                  <span className="schedule_day">Mardi au Jeudi</span>
+                  <span className="schedule_day font-open-sans font-bold" style={{ fontSize: '13px' }}>Mardi au Jeudi</span>
                   <span className="schedule_separator flex-1 h-px bg-gray-300"></span>
-                  <span className="schedule_time">11h30 - 21h00</span>
+                  <span className="schedule_time font-open-sans font-normal" style={{ fontSize: '13px' }}>11h30 - 21h00</span>
                 </li>
                 <li className="schedule-list_item flex items-center gap-3">
                   <svg className="w-4 h-4 text-[#076993] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
-                  <span className="schedule_day">Vendredi et Samedi</span>
+                  <span className="schedule_day font-open-sans font-bold" style={{ fontSize: '13px' }}>Vendredi et Samedi</span>
                   <span className="schedule_separator flex-1 h-px bg-gray-300"></span>
-                  <span className="schedule_time">11h30 - 21h30</span>
+                  <span className="schedule_time font-open-sans font-normal" style={{ fontSize: '13px' }}>11h30 - 21h30</span>
                 </li>
                 <li className="schedule-list_item flex items-center gap-3">
                   <svg className="w-4 h-4 text-[#076993] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
-                  <span className="schedule_day">Dimanche et Lundi</span>
+                  <span className="schedule_day font-open-sans font-bold" style={{ fontSize: '13px' }}>Dimanche et Lundi</span>
                   <span className="schedule_separator flex-1 h-px bg-gray-300"></span>
-                  <span className="schedule_time">Fermé</span>
+                  <span className="schedule_time font-open-sans font-normal" style={{ fontSize: '13px' }}>Fermé</span>
                 </li>
               </ul>
             </aside>
@@ -112,7 +112,7 @@ export default function Footer() {
       <div className="site-info bg-[#076993]">
         <div className="site-info_in max-w-6xl mx-auto px-6 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="copyright text-sm text-white">
+            <p className="copyright text-white font-open-sans" style={{ fontSize: '13px' }}>
               <a 
                 target="_blank" 
                 rel="noreferrer"
@@ -123,9 +123,7 @@ export default function Footer() {
               </a>
               {" - "}
               <a 
-                target="_blank" 
-                rel="noreferrer"
-                href="http://crampous-mad.fr/mentions-legales" 
+                href="/mentions-legales" 
                 className="hover:underline"
               >
                 Mentions légales

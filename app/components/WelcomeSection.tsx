@@ -5,7 +5,7 @@ export default function WelcomeSection() {
     <section id="start-section" className="max-w-6xl mx-auto px-6 py-16 text-center bg-white">
       {/* Titre principal "Bienvenue chez Crampous Mad" */}
       <div className="mb-8">
-        <h1 className="text-[#076993] text-5xl md:text-6xl font-body" style={{ fontFamily: 'Berkshire Swash, cursive' }}>
+        <h1 className="text-[#076993] text-5xl md:text-6xl font-berkshire">
           Bienvenue chez Crampous Mad
         </h1>
       </div>
@@ -26,48 +26,51 @@ export default function WelcomeSection() {
 
       
       <div className="flex flex-col md:flex-row gap-10 justify-center">
-        <div className="md:w-1/3 group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-          <div className="overflow-hidden rounded-lg">
+        <div className="md:w-1/3 group cursor-pointer">
+          <div className="relative overflow-hidden rounded-lg border-4 border-white shadow-lg">
             <img 
               src="/images/Crampous-Mad-2.jpg" 
               alt="Notre histoire" 
-              className="w-full h-auto rounded shadow-lg transition-transform duration-500 group-hover:scale-110" 
+              className="w-full h-auto rounded transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" 
+              style={{ transformOrigin: 'center center' }}
             />
           </div>
-          <h3 className="text-[#262559] text-2xl mt-4 font-body" style={{ fontFamily: 'Lora, serif' }}>
+          <h3 className="text-[#262559] text-2xl mt-4 font-lora italic font-normal" style={{ fontSize: '24px', lineHeight: '30px' }}>
             Notre histoire
           </h3>
-          <p className="text-sm leading-6 mt-2 font-sans text-gray-700">
+          <p className="text-sm leading-6 mt-2 text-black font-open-sans" style={{ fontSize: '14px', lineHeight: '22px' }}>
             Depuis son ouverture le 26 septembre 1980 la crêperie Crampous Mad est l'union culinaire entre l'Alsace et la Bretagne. Les années passent... La crêperie devient un lieu emblématique du centre-ville de Mulhouse...
           </p>
         </div>
-        <div className="md:w-1/3 group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-          <div className="overflow-hidden rounded-lg">
+        <div className="md:w-1/3 group cursor-pointer">
+          <div className="relative overflow-hidden rounded-lg border-4 border-white shadow-lg">
             <img 
               src="/images/façade.jpg" 
               alt="Le restaurant" 
-              className="w-full h-auto rounded shadow-lg transition-transform duration-500 group-hover:scale-110" 
+              className="w-full h-auto rounded transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" 
+              style={{ transformOrigin: 'center center' }}
             />
           </div>
-          <h3 className="text-[#262559] text-2xl mt-4 font-body" style={{ fontFamily: 'Lora, serif' }}>
+          <h3 className="text-[#262559] text-2xl mt-4 font-lora italic font-normal" style={{ fontSize: '24px', lineHeight: '30px' }}>
             Le restaurant
           </h3>
-          <p className="text-sm leading-6 mt-2 font-sans text-gray-700">
+          <p className="text-sm leading-6 mt-2 text-black font-open-sans" style={{ fontSize: '14px', lineHeight: '22px' }}>
             Découvrez la nouvelle ambiance authentique et conviviale, un concept familial qui prend ses aises sur deux niveaux dans une ancienne maison alsacienne du 16ème siècle.
           </p>
         </div>
-        <div className="md:w-1/3 group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-          <div className="overflow-hidden rounded-lg">
+        <div className="md:w-1/3 group cursor-pointer">
+          <div className="relative overflow-hidden rounded-lg border-4 border-white shadow-lg">
             <img 
               src="/images/Crampous_mad_associes.jpg" 
               alt="L'équipe" 
-              className="w-full h-auto rounded shadow-lg transition-transform duration-500 group-hover:scale-110" 
+              className="w-full h-auto rounded transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" 
+              style={{ transformOrigin: 'center center' }}
             />
           </div>
-          <h3 className="text-[#262559] text-2xl mt-4 font-body" style={{ fontFamily: 'Lora, serif' }}>
+          <h3 className="text-[#262559] text-2xl mt-4 font-lora italic font-normal" style={{ fontSize: '24px', lineHeight: '30px' }}>
             L'équipe
           </h3>
-          <p className="text-sm leading-6 mt-2 font-sans text-gray-700">
+          <p className="text-sm leading-6 mt-2 text-black font-open-sans" style={{ fontSize: '14px', lineHeight: '22px' }}>
             Françoise, David et toute l'équipe vous accueillent à la crêperie avec leur sourire et assurent un service en continu du lundi au jeudi de 11h30 à 21h30 et de 11h30 à 22h les vendredis et samedis.
           </p>
         </div>
@@ -84,8 +87,8 @@ export default function WelcomeSection() {
           <div className="stm_link_wrap flex-shrink-0">
             <Link 
               href="/notre-creperie" 
-              className="stm_button_link text-[#076993] font-normal italic text-lg px-11 py-2 inline-block bg-[#262559] border border-white/55 outline-4 outline-[#262559] transition-all duration-400 hover:bg-[#232323] hover:outline-[#232323] hover:border-white/40"
-              style={{fontWeight: '400', fontStyle: 'italic', color: '#076993'}}
+              className="stm_button_link text-[#076993] px-11 py-2 inline-block bg-[#262559] border border-white/55 outline-4 outline-[#262559] transition-all duration-400 hover:bg-[#232323] hover:outline-[#232323] hover:border-white/40 font-lora font-normal italic"
+              style={{ fontSize: '18px', color: '#076993' }}
             >
               <span className="stm_button-link_text text-white">Qui sommes-nous ?</span>
             </Link>

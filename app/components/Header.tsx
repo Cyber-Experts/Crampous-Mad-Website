@@ -17,7 +17,7 @@ export default function Header({ isHomePage = false }: HeaderProps) {
           {/* Navigation centrée pour la page d'accueil */}
           <div className="flex justify-center py-6">
             <nav className="main-menu" role="navigation">
-              <ul className="menu nav-menu flex items-center gap-4 text-[#262559] font-body">
+              <ul className="menu nav-menu flex items-center gap-4 text-[#262559] font-lora">
                 <li>
                   <Link href="/notre-creperie" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
                     Notre Crêperie
@@ -65,7 +65,7 @@ export default function Header({ isHomePage = false }: HeaderProps) {
                 <img
                   src="/images/logo-sans-fond-ni-date.png"
                   alt="Crampous Mad"
-                  className="h-12 w-auto"
+                  className="h-16 w-auto"
                 />
               </Link>
             </div>
@@ -85,7 +85,7 @@ export default function Header({ isHomePage = false }: HeaderProps) {
 
           <div id="site-navigation" className="main-navigation hidden md:block">
             <nav className="main-menu" role="navigation">
-              <ul className="menu nav-menu flex items-center gap-2 text-[#262559] font-body">
+                    <ul className="menu nav-menu flex items-center gap-2 text-[#262559] font-lora">
                 <li>
                   <Link href="/" className="hover:opacity-80 px-2" aria-current="page">
                     Notre Crêperie
@@ -127,7 +127,7 @@ export default function Header({ isHomePage = false }: HeaderProps) {
           aria-expanded={open ? "true" : "false"}
         >
           <nav role="navigation">
-            <ul className="menu nav-menu flex flex-col gap-3 text-[#262559] font-body">
+                  <ul className="menu nav-menu flex flex-col gap-3 text-[#262559] font-lora">
               <li>
                 <Link href="/" onClick={() => setOpen(false)} className="py-1">
                   Notre Crêperie

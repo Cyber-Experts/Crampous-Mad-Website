@@ -1,5 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @import "tailwindcss";
+
+/* Font Variables */
+.font-berkshire {
+  font-family: var(--font-berkshire-swash), Arial, sans-serif;
+}
+
+.font-lora {
+  font-family: var(--font-lora), Arial, sans-serif;
+}
+
+.font-open-sans {
+  font-family: var(--font-open-sans), sans-serif;
+}
+
+.font-roboto {
+  font-family: var(--font-roboto), sans-serif;
+}
 
 /* Defaults Icons Font */
 @font-face {
@@ -14,7 +30,6 @@
 
 [class^="Defaults-"], [class*=" Defaults-"] {
   font-family: 'Defaults';
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

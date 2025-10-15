@@ -1,122 +1,201 @@
+"use client";
+
+import BottomSeparator from "../components/BottomSeparator";
+import DiamondSeparator from "../components/DiamondSeparator";
+
 export default function MentionsLegalesPage() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative h-48 bg-gradient-to-r from-primary to-blue-600 flex items-center justify-center">
-        <div className="text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-display mb-4">Mentions légales</h1>
+    <main>
+      {/* Header avec image de fond */}
+      <header className="relative h-[400px] w-full">
+        <div
+          className="absolute inset-0 bg-center bg-cover"
+          style={{ backgroundImage: `url('/images/IMG_4419.jpg')` }}
+        />
+        <div className="relative z-10 h-full flex flex-col items-center justify-center">
+          <h1 className="text-white text-4xl md:text-5xl font-berkshire mb-6">
+            Mentions légales
+          </h1>
+          
+          {/* Barre avec losange */}
+          <div className="flex items-center">
+            <div className="w-16 h-0.5 bg-white"></div>
+            <div className="w-2 h-2 bg-white transform rotate-45 mx-4"></div>
+            <div className="w-16 h-0.5 bg-white"></div>
+          </div>
         </div>
-      </section>
+        {/* Séparateur en bas du header */}
+        <BottomSeparator color="#ffffff" overlay={true} />
+      </header>
 
-      {/* Content */}
-      <section className="py-16">
+      {/* Contenu principal */}
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
-            <h2 className="text-2xl font-display text-secondary mb-6">Informations légales</h2>
+            <h2 className="text-3xl font-bold text-[#262559] mb-8 font-lora">
+              Informations légales
+            </h2>
             
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-body font-semibold text-secondary mb-4">Éditeur du site</h3>
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <p className="font-sans text-gray-700 mb-2">
-                    <strong>Crêperie Crampous Mad</strong><br />
-                    14, rue des Tondeurs<br />
-                    68100 MULHOUSE<br />
-                    France
-                  </p>
-                  <p className="font-sans text-gray-700">
-                    Téléphone : <a href="tel:0389457943" className="text-primary hover:underline">03 89 45 79 43</a><br />
-                    Email : <a href="mailto:contact@crampous-mad.fr" className="text-primary hover:underline">contact@crampous-mad.fr</a>
-                  </p>
-                </div>
-              </div>
+            <h3 className="text-2xl font-semibold text-[#076993] mb-4 mt-8 font-lora">
+              1. Présentation du site.
+            </h3>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site <a href="http://localhost:3000" className="text-[#076993] hover:underline font-lora">http://localhost:3000</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :
+            </p>
+            <p className="mb-6 text-gray-700 leading-relaxed font-open-sans">
+              <strong className="font-lora">Propriétaire</strong> : crêperie crampous mad – SARL – 14 rue des tondeurs Mulhouse<br/>
+              <strong className="font-lora">Créateur</strong> : Cyber Experts<br/>
+              <strong className="font-lora">Responsable publication</strong> : Cyber Experts – contact@cyberexperts.io<br/>
+              Le responsable publication est une personne physique ou une personne morale.<br/>
+              <strong className="font-lora">Webmaster</strong> : Cyber Experts – contact@cyberexperts.io<br/>
+              <strong className="font-lora">Hébergeur</strong> : Hostinger.
+            </p>
 
-              <div>
-                <h3 className="text-xl font-body font-semibold text-secondary mb-4">Hébergement</h3>
-                <p className="font-sans text-gray-700">
-                  Ce site est hébergé par un prestataire technique. Pour toute question concernant l'hébergement, 
-                  veuillez nous contacter directement.
-                </p>
-              </div>
+            <h3 className="text-2xl font-semibold text-[#076993] mb-4 mt-8 font-lora">
+              2. Conditions générales d'utilisation du site et des services proposés.
+            </h3>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              L'utilisation du site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> implique l'acceptation pleine et entière des conditions générales d'utilisation ci-après décrites. Ces conditions d'utilisation sont susceptibles d'être modifiées ou complétées à tout moment, les utilisateurs du site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> sont donc invités à les consulter de manière régulière.
+            </p>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              Ce site est normalement accessible à tout moment aux utilisateurs. Une interruption pour raison de maintenance technique peut être toutefois décidée par crêperie crampous mad, qui s'efforcera alors de communiquer préalablement aux utilisateurs les dates et heures de l'intervention.
+            </p>
+            <p className="mb-6 text-gray-700 leading-relaxed font-open-sans">
+              Le site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> est mis à jour régulièrement par Cyber Experts. De la même façon, les mentions légales peuvent être modifiées à tout moment : elles s'imposent néanmoins à l'utilisateur qui est invité à s'y référer le plus souvent possible afin d'en prendre connaissance.
+            </p>
 
-              <div>
-                <h3 className="text-xl font-body font-semibold text-secondary mb-4">Propriété intellectuelle</h3>
-                <p className="font-sans text-gray-700 mb-4">
-                  L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur 
-                  et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les 
-                  documents téléchargeables et les représentations iconographiques et photographiques.
-                </p>
-                <p className="font-sans text-gray-700">
-                  La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est 
-                  formellement interdite sauf autorisation expresse du directeur de la publication.
-                </p>
-              </div>
+            <h3 className="text-2xl font-semibold text-[#076993] mb-4 mt-8 font-lora">
+              3. Description des services fournis.
+            </h3>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              Le site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> a pour objet de fournir une information concernant l'ensemble des activités de la société.
+            </p>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              crêperie crampous mad s'efforce de fournir sur le site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> des informations aussi précises que possible. Toutefois, il ne pourra être tenue responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
+            </p>
+            <p className="mb-6 text-gray-700 leading-relaxed font-open-sans">
+              Tous les informations indiquées sur le site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> sont données à titre indicatif, et sont susceptibles d'évoluer. Par ailleurs, les renseignements figurant sur le site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.
+            </p>
 
-              <div>
-                <h3 className="text-xl font-body font-semibold text-secondary mb-4">Collecte et traitement des données personnelles</h3>
-                <p className="font-sans text-gray-700 mb-4">
-                  Conformément à la loi "Informatique et Libertés" du 6 janvier 1978 modifiée et au Règlement 
-                  Général sur la Protection des Données (RGPD), nous nous engageons à protéger vos données personnelles.
-                </p>
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-body font-semibold text-secondary mb-2">Données collectées :</h4>
-                  <ul className="font-sans text-gray-700 list-disc list-inside space-y-1">
-                    <li>Nom et prénom</li>
-                    <li>Adresse email</li>
-                    <li>Numéro de téléphone</li>
-                    <li>Informations de réservation</li>
-                  </ul>
-                </div>
-                <p className="font-sans text-gray-700 mt-4">
-                  Ces données sont utilisées uniquement pour traiter vos demandes de réservation et vous contacter 
-                  si nécessaire. Elles ne sont pas transmises à des tiers sans votre consentement.
-                </p>
-              </div>
+            <h3 className="text-2xl font-semibold text-[#076993] mb-4 mt-8 font-lora">
+              4. Limitations contractuelles sur les données techniques.
+            </h3>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              Le site utilise la technologie JavaScript.
+            </p>
+            <p className="mb-6 text-gray-700 leading-relaxed font-open-sans">
+              Le site Internet ne pourra être tenu responsable de dommages matériels liés à l'utilisation du site. De plus, l'utilisateur du site s'engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour
+            </p>
 
-              <div>
-                <h3 className="text-xl font-body font-semibold text-secondary mb-4">Cookies</h3>
-                <p className="font-sans text-gray-700">
-                  Ce site utilise des cookies techniques nécessaires au bon fonctionnement du site. 
-                  Aucun cookie de tracking ou de publicité n'est utilisé.
-                </p>
-              </div>
+            <h3 className="text-2xl font-semibold text-[#076993] mb-4 mt-8 font-lora">
+              5. Propriété intellectuelle et contrefaçons.
+            </h3>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              crêperie crampous mad est propriétaire des droits de propriété intellectuelle ou détient les droits d'usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logo, icônes, sons, logiciels.
+            </p>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de : crêperie crampous mad.
+            </p>
+            <p className="mb-6 text-gray-700 leading-relaxed font-open-sans">
+              Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.
+            </p>
 
-              <div>
-                <h3 className="text-xl font-body font-semibold text-secondary mb-4">Responsabilité</h3>
-                <p className="font-sans text-gray-700 mb-4">
-                  Les informations contenues sur ce site sont aussi précises que possible et le site remis à jour 
-                  à différentes périodes de l'année, mais peut toutefois contenir des inexactitudes ou des omissions.
-                </p>
-                <p className="font-sans text-gray-700">
-                  Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien 
-                  vouloir le signaler par email, à l'adresse contact@crampous-mad.fr, en décrivant le problème 
-                  de la manière la plus précise possible.
-                </p>
-              </div>
+            <h3 className="text-2xl font-semibold text-[#076993] mb-4 mt-8 font-lora">
+              6. Limitations de responsabilité.
+            </h3>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              crêperie crampous mad ne pourra être tenue responsable des dommages directs et indirects causés au matériel de l'utilisateur, lors de l'accès au site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a>, et résultant soit de l'utilisation d'un matériel ne répondant pas aux spécifications indiquées au point 4, soit de l'apparition d'un bug ou d'une incompatibilité.
+            </p>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              crêperie crampous mad ne pourra également être tenue responsable des dommages indirects (tels par exemple qu'une perte de marché ou perte d'une chance) consécutifs à l'utilisation du site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a>.
+            </p>
+            <p className="mb-6 text-gray-700 leading-relaxed font-open-sans">
+              Des espaces interactifs (possibilité de poser des questions dans l'espace contact) sont à la disposition des utilisateurs. crêperie crampous mad se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, crêperie crampous mad se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l'utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…).
+            </p>
 
-              <div>
-                <h3 className="text-xl font-body font-semibold text-secondary mb-4">Droit applicable</h3>
-                <p className="font-sans text-gray-700">
-                  Tout litige en relation avec l'utilisation du site crampous-mad.fr est soumis au droit français. 
-                  Il est fait attribution exclusive de juridiction aux tribunaux compétents de Mulhouse.
-                </p>
-              </div>
+            <h3 className="text-2xl font-semibold text-[#076993] mb-4 mt-8 font-lora">
+              7. Gestion des données personnelles.
+            </h3>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              En France, les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004, l'article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995.
+            </p>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              A l'occasion de l'utilisation du site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a>, peuvent êtres recueillies : l'URL des liens par l'intermédiaire desquels l'utilisateur a accédé au site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a>, le fournisseur d'accès de l'utilisateur, l'adresse de protocole Internet (IP) de l'utilisateur.
+            </p>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              En tout état de cause crêperie crampous mad ne collecte des informations personnelles relatives à l'utilisateur que pour le besoin de certains services proposés par le site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a>. L'utilisateur fournit ces informations en toute connaissance de cause, notamment lorsqu'il procède par lui-même à leur saisie. Il est alors précisé à l'utilisateur du site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> l'obligation ou non de fournir ces informations.
+            </p>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              Conformément aux dispositions des articles 38 et suivants de la loi 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, tout utilisateur dispose d'un droit d'accès, de rectification et d'opposition aux données personnelles le concernant, en effectuant sa demande écrite et signée, accompagnée d'une copie du titre d'identité avec signature du titulaire de la pièce, en précisant l'adresse à laquelle la réponse doit être envoyée.
+            </p>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              Aucune information personnelle de l'utilisateur du site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> n'est publiée à l'insu de l'utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Seule l'hypothèse du rachat de crêperie crampous mad et de ses droits permettrait la transmission des dites informations à l'éventuel acquéreur qui serait à son tour tenu de la même obligation de conservation et de modification des données vis à vis de l'utilisateur du site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a>.
+            </p>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              Le site n'est pas déclaré à la CNIL car il ne recueille pas d'informations personnelles. .
+            </p>
+            <p className="mb-6 text-gray-700 leading-relaxed font-open-sans">
+              Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.
+            </p>
 
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-body font-semibold text-secondary mb-4">Contact</h3>
-                <p className="font-sans text-gray-700">
-                  Pour toute question concernant ces mentions légales, vous pouvez nous contacter :
-                </p>
-                <ul className="font-sans text-gray-700 mt-2 space-y-1">
-                  <li>Par téléphone : <a href="tel:0389457943" className="text-primary hover:underline">03 89 45 79 43</a></li>
-                  <li>Par email : <a href="mailto:contact@crampous-mad.fr" className="text-primary hover:underline">contact@crampous-mad.fr</a></li>
-                  <li>Par courrier : 14, rue des Tondeurs, 68100 MULHOUSE</li>
-                </ul>
-              </div>
-            </div>
+            <h3 className="text-2xl font-semibold text-[#076993] mb-4 mt-8 font-lora">
+              8. Liens hypertextes et cookies.
+            </h3>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              Le site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> contient un certain nombre de liens hypertextes vers d'autres sites, mis en place avec l'autorisation de crêperie crampous mad. Cependant, crêperie crampous mad n'a pas la possibilité de vérifier le contenu des sites ainsi visités, et n'assumera en conséquence aucune responsabilité de ce fait.
+            </p>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              La navigation sur le site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> est susceptible de provoquer l'installation de cookie(s) sur l'ordinateur de l'utilisateur. Un cookie est un fichier de petite taille, qui ne permet pas l'identification de l'utilisateur, mais qui enregistre des informations relatives à la navigation d'un ordinateur sur un site. Les données ainsi obtenues visent à faciliter la navigation ultérieure sur le site, et ont également vocation à permettre diverses mesures de fréquentation.
+            </p>
+            <p className="mb-4 text-gray-700 leading-relaxed font-open-sans">
+              Le refus d'installation d'un cookie peut entraîner l'impossibilité d'accéder à certains services. L'utilisateur peut toutefois configurer son ordinateur de la manière suivante, pour refuser l'installation des cookies :
+            </p>
+            <p className="mb-2 text-gray-700 leading-relaxed">
+              Sous Internet Explorer : onglet outil (pictogramme en forme de rouage en haut a droite) / options internet. Cliquez sur Confidentialité et choisissez Bloquer tous les cookies. Validez sur Ok.
+            </p>
+            <p className="mb-2 text-gray-700 leading-relaxed">
+              Sous Firefox : en haut de la fenêtre du navigateur, cliquez sur le bouton Firefox, puis aller dans l'onglet Options. Cliquer sur l'onglet Vie privée.<br/>
+              Paramétrez les Règles de conservation sur : utiliser les paramètres personnalisés pour l'historique. Enfin décochez-la pour désactiver les cookies.
+            </p>
+            <p className="mb-2 text-gray-700 leading-relaxed">
+              Sous Safari : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par un rouage). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section « Confidentialité », cliquez sur Paramètres de contenu. Dans la section « Cookies », vous pouvez bloquer les cookies.
+            </p>
+            <p className="mb-6 text-gray-700 leading-relaxed font-open-sans">
+              Sous Chrome : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par trois lignes horizontales). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section « Confidentialité », cliquez sur préférences. Dans l'onglet « Confidentialité », vous pouvez bloquer les cookies.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-[#076993] mb-4 mt-8 font-lora">
+              9. Droit applicable et attribution de juridiction.
+            </h3>
+            <p className="mb-6 text-gray-700 leading-relaxed font-open-sans">
+              Tout litige en relation avec l'utilisation du site <a href="http://localhost:3000" className="text-[#076993] hover:underline">http://localhost:3000</a> est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-[#076993] mb-4 mt-8 font-lora">
+              10. Les principales lois concernées.
+            </h3>
+            <p className="mb-2 text-gray-700 leading-relaxed">
+              Loi n° 78-17 du 6 janvier 1978, notamment modifiée par la loi n° 2004-801 du 6 août 2004 relative à l'informatique, aux fichiers et aux libertés.
+            </p>
+            <p className="mb-6 text-gray-700 leading-relaxed font-open-sans">
+              Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-[#076993] mb-4 mt-8 font-lora">
+              11. Lexique.
+            </h3>
+            <p className="mb-2 text-gray-700 leading-relaxed">
+              Utilisateur : Internaute se connectant, utilisant le site susnommé.
+            </p>
+            <p className="mb-6 text-gray-700 leading-relaxed font-open-sans">
+              Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).
+            </p>
           </div>
         </div>
       </section>
+
+      {/* Séparateur en losanges en bas de page */}
+      <DiamondSeparator />
     </main>
   );
 }
