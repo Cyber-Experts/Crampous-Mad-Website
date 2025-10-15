@@ -1,257 +1,139 @@
-"use client";
-
-import { useState } from "react";
+import Link from "next/link";
 
 export default function ReservationPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    date: "",
-    time: "",
-    guests: "",
-    message: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Ici vous pouvez ajouter la logique d'envoi du formulaire
-    console.log("Réservation:", formData);
-    alert("Votre demande de réservation a été envoyée ! Nous vous contacterons bientôt.");
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative h-64 bg-gradient-to-r from-primary to-blue-600 flex items-center justify-center">
-        <div className="text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-display mb-4">Réservation</h1>
-          <p className="text-xl font-body">Réservez votre table pour une expérience culinaire unique</p>
+    <main>
+      {/* Header avec image de fond */}
+      <header className="relative h-[400px] w-full">
+        <div
+          className="absolute inset-0 bg-center bg-cover"
+          style={{ backgroundImage: `url('/images/bandeau_3-1.png')` }}
+        />
+        <div className="relative z-10 h-full flex flex-col items-center justify-center">
+          <h1 className="text-white text-4xl md:text-5xl font-display mb-6" style={{fontFamily: 'Berkshire Swash, serif'}}>
+            Réservation
+          </h1>
+          
+          {/* Barre avec losange */}
+          <div className="flex items-center">
+            <div className="w-16 h-0.5 bg-white"></div>
+            <div className="w-2 h-2 bg-white transform rotate-45 mx-4"></div>
+            <div className="w-16 h-0.5 bg-white"></div>
+          </div>
         </div>
-      </section>
+      </header>
 
-      {/* Reservation Form */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Formulaire */}
-            <div>
-              <h2 className="text-3xl font-display text-secondary mb-6">Réservez votre table</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-body font-medium text-gray-700 mb-2">
-                      Nom complet *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-sans"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-body font-medium text-gray-700 mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-sans"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-body font-medium text-gray-700 mb-2">
-                      Téléphone *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-sans"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="guests" className="block text-sm font-body font-medium text-gray-700 mb-2">
-                      Nombre de personnes *
-                    </label>
-                    <select
-                      id="guests"
-                      name="guests"
-                      required
-                      value={formData.guests}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-sans"
-                    >
-                      <option value="">Sélectionnez</option>
-                      <option value="1">1 personne</option>
-                      <option value="2">2 personnes</option>
-                      <option value="3">3 personnes</option>
-                      <option value="4">4 personnes</option>
-                      <option value="5">5 personnes</option>
-                      <option value="6">6 personnes</option>
-                      <option value="7">7 personnes</option>
-                      <option value="8">8 personnes</option>
-                      <option value="9+">9+ personnes</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="date" className="block text-sm font-body font-medium text-gray-700 mb-2">
-                      Date souhaitée *
-                    </label>
-                    <input
-                      type="date"
-                      id="date"
-                      name="date"
-                      required
-                      value={formData.date}
-                      onChange={handleChange}
-                      min={new Date().toISOString().split('T')[0]}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-sans"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="time" className="block text-sm font-body font-medium text-gray-700 mb-2">
-                      Heure souhaitée *
-                    </label>
-                    <select
-                      id="time"
-                      name="time"
-                      required
-                      value={formData.time}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-sans"
-                    >
-                      <option value="">Sélectionnez</option>
-                      <option value="11:30">11:30</option>
-                      <option value="12:00">12:00</option>
-                      <option value="12:30">12:30</option>
-                      <option value="13:00">13:00</option>
-                      <option value="13:30">13:30</option>
-                      <option value="14:00">14:00</option>
-                      <option value="18:00">18:00</option>
-                      <option value="18:30">18:30</option>
-                      <option value="19:00">19:00</option>
-                      <option value="19:30">19:30</option>
-                      <option value="20:00">20:00</option>
-                      <option value="20:30">20:30</option>
-                      <option value="21:00">21:00</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-body font-medium text-gray-700 mb-2">
-                    Message spécial (optionnel)
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Allergies, anniversaire, demande spéciale..."
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-sans"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-primary hover:bg-blue-600 text-white py-4 px-6 rounded-lg font-body font-medium text-lg transition-colors duration-300"
-                >
-                  Confirmer la réservation
-                </button>
-              </form>
+      {/* Section principale */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Titre principal avec icône */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-normal text-[#076993] mb-8" style={{fontFamily: 'Berkshire Swash, serif'}}>
+              Toute l'équipe est heureuse de vous accueillir
+            </h2>
+            
+            {/* Icône avec barres */}
+            <div className="flex items-center justify-center mb-8">
+              <div className="w-16 h-0.5 bg-[#262559]"></div>
+              <div className="mx-4">
+                <img src="/images/picto1.png" alt="Icône réservation" className="w-12 h-12" />
+              </div>
+              <div className="w-16 h-0.5 bg-[#262559]"></div>
             </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg text-[#262559] mb-4">
+                Vous pouvez réserver votre table par téléphone ou nous contacter par mail pour l'organisation de vos événements privés.
+              </p>
+              <p className="text-lg font-semibold text-[#262559]">
+                Les crêpes et galettes sont disponibles à emporter.
+              </p>
+            </div>
+          </div>
 
-            {/* Informations */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-display text-secondary mb-4">Informations pratiques</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-body font-semibold text-secondary">Horaires d'ouverture</h4>
-                      <p className="text-gray-600 font-sans">
-                        Mardi au Jeudi : 11h30 - 21h00<br />
-                        Vendredi et Samedi : 11h30 - 21h30<br />
-                        Dimanche et Lundi : Fermé
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-body font-semibold text-secondary">Réservation par téléphone</h4>
-                      <p className="text-gray-600 font-sans">
-                        <a href="tel:0389457943" className="text-primary hover:underline">03 89 45 79 43</a>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-body font-semibold text-secondary">Privatisation</h4>
-                      <p className="text-gray-600 font-sans">
-                        Possibilité de privatiser une partie de l'établissement pour vos événements privés.
-                      </p>
-                    </div>
-                  </div>
+          {/* Section des 3 colonnes */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {/* Réservation par téléphone */}
+            <div className="text-center">
+              <h3 className="text-2xl font-normal text-[#076993] mb-4" style={{fontFamily: 'Berkshire Swash, serif'}}>
+                Réservation par téléphone
+              </h3>
+              <p className="text-gray-700 mb-6">
+                Vous pouvez nous joindre par téléphone pour effectuer vos réservations
+              </p>
+              
+              {/* Bouton avec barres - Design identique à Qui sommes-nous */}
+              <div className="stm_button flex items-center w-full max-w-4xl">
+                {/* Séparateur gauche */}
+                <div className="stm_separator_wrap __left flex-1 pr-8">
+                  <div className="h-0.5 w-full bg-[#076993]"></div>
+                </div>
+                
+                {/* Bouton central */}
+                <div className="stm_link_wrap flex-shrink-0">
+                  <a 
+                    href="tel:0389457943" 
+                    className="stm_button_link text-[#076993] font-normal italic text-lg px-11 py-2 inline-block bg-[#262559] border border-white/55 outline-4 outline-[#262559] transition-all duration-400 hover:bg-[#232323] hover:outline-[#232323] hover:border-white/40"
+                    style={{fontWeight: '400', fontStyle: 'italic', color: '#076993'}}
+                  >
+                    <span className="stm_button-link_text text-white">03 89 45 79 43</span>
+                  </a>
+                </div>
+                
+                {/* Séparateur droit */}
+                <div className="stm_separator_wrap __right flex-1 pl-8">
+                  <div className="h-0.5 w-full bg-[#076993]"></div>
                 </div>
               </div>
+            </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="font-body font-semibold text-secondary mb-3">Adresse</h4>
-                <p className="text-gray-600 font-sans mb-2">
-                  14, rue des Tondeurs<br />
-                  68100 MULHOUSE
-                </p>
-                <p className="text-sm text-gray-500 font-sans">
-                  Stationnement disponible dans les environs
-                </p>
+            {/* Image centrale */}
+            <div className="flex items-center justify-center">
+              <img 
+                src="/images/F17A4434.jpg" 
+                alt="Intérieur de la crêperie" 
+                className="w-full h-64 object-cover shadow-lg"
+              />
+            </div>
+
+            {/* Événement privé */}
+            <div className="text-center">
+              <h3 className="text-2xl font-normal text-[#076993] mb-4" style={{fontFamily: 'Berkshire Swash, serif'}}>
+                Événement privé
+              </h3>
+              <p className="text-gray-700 mb-6">
+                Si vous le souhaitez vous pouvez privatiser une partie du restaurant pour tous types d'événements privés : anniversaire, fête de famille, etc.
+              </p>
+              
+              {/* Bouton avec barres - Design identique à Qui sommes-nous */}
+              <div className="stm_button flex items-center w-full max-w-4xl">
+                {/* Séparateur gauche */}
+                <div className="stm_separator_wrap __left flex-1 pr-8">
+                  <div className="h-0.5 w-full bg-[#076993]"></div>
+                </div>
+                
+                {/* Bouton central */}
+                <div className="stm_link_wrap flex-shrink-0">
+                  <Link 
+                    href="/contactez-nous" 
+                    className="stm_button_link text-[#076993] font-normal italic text-lg px-11 py-2 inline-block bg-[#262559] border border-white/55 outline-4 outline-[#262559] transition-all duration-400 hover:bg-[#232323] hover:outline-[#232323] hover:border-white/40"
+                    style={{fontWeight: '400', fontStyle: 'italic', color: '#076993'}}
+                  >
+                    <span className="stm_button-link_text text-white">Contactez nous</span>
+                  </Link>
+                </div>
+                
+                {/* Séparateur droit */}
+                <div className="stm_separator_wrap __right flex-1 pl-8">
+                  <div className="h-0.5 w-full bg-[#076993]"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+
     </main>
   );
 }

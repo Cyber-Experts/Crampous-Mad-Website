@@ -1,84 +1,113 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
 
 export default function BlogPage() {
   const blogPosts = [
     {
       id: 1,
-      title: "Stationnement à Mulhouse : nos conseils",
-      excerpt: "Vous venez nous rendre visite ? Voici nos conseils pour vous garer facilement à Mulhouse.",
+      title: "Se stationner au centre ville de Mulhouse",
+      excerpt: "Découvrez nos trucs et astuces pour se stationner au centre...",
       image: "/images/stationnement-mulhouse.jpg",
-      date: "25 juillet 2016",
-      category: "Actualité",
-      link: "#"
+      date: "17 janvier",
+      time: "9 h 33 min",
+      category: "actualite",
+      href: "/blog/stationnement-mulhouse"
     },
     {
       id: 2,
-      title: "Noël 2015 à Mulhouse : la foire enchantée",
-      excerpt: "Découvrez les festivités de Noël à Mulhouse et notre participation à la foire enchantée.",
-      image: "/images/noel-2015-a-mulhouse-la-foire-enchantee-45619-470-0.jpg",
-      date: "15 décembre 2015",
-      category: "Événements",
-      link: "#"
+      title: "Potagers Urbains au centre-ville de Mulhouse",
+      excerpt: "Dans le cadre de la Journée Citoyenne 2017 et en partenaria...",
+      image: "/images/20170504_093426.jpg",
+      date: "2 mai",
+      time: "17 h 33 min",
+      category: "non-classe",
+      href: "/blog/potagers-urbains"
     },
     {
       id: 3,
-      title: "Carnaval de Mulhouse : chaîne de réunion",
-      excerpt: "Notre participation au carnaval de Mulhouse et la chaîne de réunion traditionnelle.",
-      image: "/images/carnaval-de-mulhouse-cha-ce-reunion-58533-470-0.jpg",
-      date: "10 mars 2015",
-      category: "Événements",
-      link: "#"
+      title: "Le Carnaval de Mulhouse fait son grand retour !",
+      excerpt: "CARNAVAL DE MULHOUSE – DU 3 AU 5 MARS 2017 Du 3 au 5 mars ...",
+      image: "/images/carnaval-de-mulhouse-chars-place-reunion-58533-470-0.jpg",
+      date: "28 février",
+      time: "14 h 55 min",
+      category: "non-classe",
+      href: "/blog/carnaval-mulhouse"
+    },
+    {
+      id: 4,
+      title: "Le retour de la patinoire enchantée à Mulhouse !",
+      excerpt: "Patinoire enchantée – Cour des Maréchaux – Du 24 novem...",
+      image: "/images/noel-2015-a-mulhouse-la-patinoire-enchantee-45619-470-0.jpg",
+      date: "24 novembre",
+      time: "11 h 14 min",
+      category: "evenement",
+      href: "/blog/patinoire-enchantee"
     }
   ];
 
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative h-64 bg-gradient-to-r from-primary to-blue-600 flex items-center justify-center">
-        <div className="text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-display mb-4">L'actu</h1>
-          <p className="text-xl font-body">Retrouvez toutes nos actualités et événements</p>
+    <main>
+      {/* Header avec image de fond */}
+      <header className="relative h-[400px] w-full">
+        <div
+          className="absolute inset-0 bg-center bg-cover"
+          style={{ backgroundImage: `url('/images/bandeau_3-1.png')` }}
+        />
+        <div className="relative z-10 h-full flex flex-col items-center justify-center">
+          <h1 className="text-white text-4xl md:text-5xl font-display mb-6" style={{fontFamily: 'Berkshire Swash, serif'}}>
+            L'actu
+          </h1>
+          
+          {/* Barre avec losange */}
+          <div className="flex items-center">
+            <div className="w-16 h-0.5 bg-white"></div>
+            <div className="w-2 h-2 bg-white transform rotate-45 mx-4"></div>
+            <div className="w-16 h-0.5 bg-white"></div>
+          </div>
         </div>
-      </section>
+      </header>
 
-      {/* Blog Posts */}
-      <section className="py-16">
+      {/* Section des articles de blog - Style identique à NewsSection */}
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Grille d'articles avec design carré - 4 colonnes */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {blogPosts.map((post) => (
-              <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-48">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-accent text-white px-3 py-1 rounded-full text-sm font-body">
-                      {post.category}
-                    </span>
+              <article key={post.id} className="bg-white border-2 border-gray-100 hover:border-[#076993] transition-all duration-300 hover:shadow-xl group flex flex-col">
+                {/* Image avec background-image style */}
+                <div 
+                  className="w-full h-48 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
+                  style={{ backgroundImage: `url(${post.image})` }}
+                ></div>
+                
+                {/* Contenu avec design carré - flex pour aligner les boutons */}
+                <div className="p-4 flex flex-col flex-grow">
+                  <h3 className="text-lg font-body font-semibold mb-2 text-[#262559]" style={{ fontFamily: 'Lora, serif' }}>
+                    <Link href={post.href} className="hover:text-[#076993] transition-colors">
+                      {post.title}
+                    </Link>
+                  </h3>
+                  
+                  {/* Date et heure */}
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-6 h-0.5 bg-[#076993]"></div>
+                    <div className="px-2 text-xs text-[#076993] font-medium text-center">
+                      {post.date}<br/>{post.time}
+                    </div>
+                    <div className="w-6 h-0.5 bg-[#076993]"></div>
                   </div>
-                </div>
-                <div className="p-6">
-                  <div className="text-sm text-gray-500 mb-2 font-body">
-                    {post.date}
-                  </div>
-                  <h2 className="text-xl font-body font-semibold mb-3 text-secondary">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-600 mb-4 font-sans">
+                  
+                  <p className="text-gray-600 text-sm mb-4 font-sans leading-relaxed flex-grow">
                     {post.excerpt}
                   </p>
+                  
+                  {/* Bouton carré avec style du site - aligné en bas */}
                   <Link 
-                    href={post.link}
-                    className="inline-flex items-center text-primary hover:text-blue-600 font-body font-medium"
+                    href={post.href} 
+                    className="inline-block bg-[#262559] hover:bg-[#076993] text-white px-4 py-2 text-sm font-body font-medium transition-colors duration-300 border-2 border-[#262559] hover:border-[#076993] mt-auto"
                   >
                     Lire la suite
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
                   </Link>
                 </div>
               </article>
@@ -87,25 +116,17 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-display text-secondary mb-4">
-            Restez informé de nos actualités
-          </h2>
-          <p className="text-gray-600 mb-8 font-sans">
-            Abonnez-vous à notre newsletter pour ne rien rater de nos événements et nouveautés
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Votre adresse email"
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-            />
-            <button className="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-body font-medium transition-colors duration-300">
-              S'abonner
-            </button>
-          </div>
+      {/* Séparateur décoratif */}
+      <section className="relative">
+        <div className="w-full h-4 bg-[#076993]">
+          <svg className="w-full h-full" viewBox="0 0 100 15" preserveAspectRatio="none">
+            <defs>
+              <pattern id="separator-pattern" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+                <path fillRule="evenodd" clipRule="evenodd" fill="#076993" d="M7.504-0.008l7.504,7.504L7.504,15L0,7.496L7.504-0.008z"></path>
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="100%" height="15" fill="url(#separator-pattern)"></rect>
+          </svg>
         </div>
       </section>
     </main>

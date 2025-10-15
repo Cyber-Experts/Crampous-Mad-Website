@@ -3,11 +3,60 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Header() {
+interface HeaderProps {
+  isHomePage?: boolean;
+}
+
+export default function Header({ isHomePage = false }: HeaderProps) {
   const [open, setOpen] = useState(false);
 
+  if (isHomePage) {
+    return (
+      <header className="site-header bg-white">
+        <div className="site-header_in max-w-7xl mx-auto px-8">
+          {/* Navigation centrée pour la page d'accueil */}
+          <div className="flex justify-center py-8">
+            <nav className="main-menu" role="navigation">
+              <ul className="menu nav-menu flex items-center gap-4 text-[#262559] font-body">
+                <li>
+                  <Link href="/" className="hover:opacity-80 px-8 py-3 text-lg font-medium" aria-current="page">
+                    Notre Crêperie
+                  </Link>
+                </li>
+                <li className="flex items-center">
+                  <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
+                </li>
+                <li>
+                  <Link href="/blog" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                    L'actu
+                  </Link>
+                </li>
+                <li className="flex items-center">
+                  <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
+                </li>
+                <li>
+                  <Link href="/reservation" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                    Réservation
+                  </Link>
+                </li>
+                <li className="flex items-center">
+                  <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
+                </li>
+                <li>
+                  <Link href="/contactez-nous" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    );
+  }
+
   return (
-    <header className="site-header bg-[#f7f7f7]">
+    <header className="site-header bg-white">
       <div className="site-header_in max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <div className="site-branding flex items-center gap-4">
@@ -16,7 +65,7 @@ export default function Header() {
                 <img
                   src="/images/logo-sans-fond-ni-date.png"
                   alt="Crampous Mad"
-                  className="h-10 w-auto"
+                  className="h-12 w-auto"
                 />
               </Link>
             </div>
@@ -36,24 +85,33 @@ export default function Header() {
 
           <div id="site-navigation" className="main-navigation hidden md:block">
             <nav className="main-menu" role="navigation">
-              <ul className="menu nav-menu flex items-center gap-6 text-[#262559]">
+              <ul className="menu nav-menu flex items-center gap-2 text-[#262559] font-body">
                 <li>
-                  <Link href="/" className="hover:opacity-80" aria-current="page">
+                  <Link href="/" className="hover:opacity-80 px-2" aria-current="page">
                     Notre Crêperie
                   </Link>
                 </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#076993] transform rotate-45 mx-2"></div>
+                </li>
                 <li>
-                  <Link href="/blog" className="hover:opacity-80">
+                  <Link href="/blog" className="hover:opacity-80 px-2">
                     L'actu
                   </Link>
                 </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#076993] transform rotate-45 mx-2"></div>
+                </li>
                 <li>
-                  <Link href="/reservation" className="hover:opacity-80">
+                  <Link href="/reservation" className="hover:opacity-80 px-2">
                     Réservation
                   </Link>
                 </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-[#076993] transform rotate-45 mx-2"></div>
+                </li>
                 <li>
-                  <Link href="/contactez-nous" className="hover:opacity-80">
+                  <Link href="/contactez-nous" className="hover:opacity-80 px-2">
                     Contact
                   </Link>
                 </li>
@@ -69,44 +127,26 @@ export default function Header() {
           aria-expanded={open ? "true" : "false"}
         >
           <nav role="navigation">
-            <ul className="menu nav-menu flex flex-col gap-3 text-[#262559]">
+            <ul className="menu nav-menu flex flex-col gap-3 text-[#262559] font-body">
               <li>
                 <Link href="/" onClick={() => setOpen(false)} className="py-1">
                   Notre Crêperie
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://crampous-mad.fr/blog"
-                  className="py-1"
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => setOpen(false)}
-                >
-                  L’actu
-                </a>
+                <Link href="/blog" onClick={() => setOpen(false)} className="py-1">
+                  L'actu
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://crampous-mad.fr/reservation"
-                  className="py-1"
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => setOpen(false)}
-                >
+                <Link href="/reservation" onClick={() => setOpen(false)} className="py-1">
                   Réservation
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://crampous-mad.fr/contactez-nous"
-                  className="py-1"
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => setOpen(false)}
-                >
+                <Link href="/contactez-nous" onClick={() => setOpen(false)} className="py-1">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
