@@ -49,7 +49,7 @@ export default function HeroSlider({ slides, intervalMs = 5000 }: HeroSliderProp
           <img src="/images/logo-sans-fond-ni-date.png" alt="Crampous Mad" className="h-20 w-auto mx-auto" />
         </div>
         
-        <h2 className="text-white text-4xl md:text-6xl font-normal border-y border-[#e3ad47] py-4 px-6 inline-block" style={{fontFamily: 'Berkshire Swash, serif'}}>
+        <h2 className="text-white text-4xl md:text-6xl font-normal py-4 px-6 inline-block" style={{fontFamily: 'Berkshire Swash, Georgia, serif'}}>
           {current.title}
         </h2>
         {current.ctaHref && current.ctaLabel ? (
