@@ -30,8 +30,6 @@ export default function Home() {
         ]}
       />
 
-      <Header isHomePage={true} />
-
       <WelcomeSection />
       
               {/* Image de fond après "Qui sommes-nous ?" - Pleine largeur sans texte */}

@@ -74,14 +74,14 @@ export default function WelcomeSection() {
       </div>
       
       <div className="mt-10 flex justify-center">
-        <div className="stm_button flex items-center">
+        <div className="stm_button flex items-center w-full max-w-4xl">
           {/* Séparateur gauche */}
-          <div className="stm_separator_wrap __left pr-8">
-            <span className="stm_button_separator block h-px w-full bg-[#262559]" style={{width: '100%', height: '1px', backgroundColor: '#262559'}}></span>
+          <div className="stm_separator_wrap __left flex-1 pr-8">
+            <div className="h-0.5 w-full bg-[#076993]"></div>
           </div>
           
           {/* Bouton central */}
-          <div className="stm_link_wrap">
+          <div className="stm_link_wrap flex-shrink-0">
             <Link 
               href="/notre-creperie" 
               className="stm_button_link text-[#076993] font-normal italic text-lg px-11 py-2 inline-block bg-[#262559] border border-white/55 outline-4 outline-[#262559] transition-all duration-400 hover:bg-[#232323] hover:outline-[#232323] hover:border-white/40"
@@ -92,8 +92,8 @@ export default function WelcomeSection() {
           </div>
           
           {/* Séparateur droit */}
-          <div className="stm_separator_wrap __right pl-8">
-            <span className="stm_button_separator block h-px w-full bg-[#262559]" style={{width: '100%', height: '1px', backgroundColor: '#262559'}}></span>
+          <div className="stm_separator_wrap __right flex-1 pl-8">
+            <div className="h-0.5 w-full bg-[#076993]"></div>
           </div>
         </div>
       </div>

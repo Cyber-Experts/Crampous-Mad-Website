@@ -29,7 +29,7 @@ export default function HeroSlider({ slides, intervalMs = 5000 }: HeroSliderProp
   const current = slides[index];
 
   return (
-    <section className="hero-slider relative h-[70vh] min-h-[420px] w-full overflow-hidden">
+    <section className="hero-slider relative h-[85vh] min-h-[600px] w-full overflow-hidden">
       {slides.map((s, i) => (
         <div
           key={i}
@@ -43,6 +43,50 @@ export default function HeroSlider({ slides, intervalMs = 5000 }: HeroSliderProp
 
       <div className="absolute inset-0 bg-black/35" />
 
+      {/* Navbar en haut */}
+      <div className="relative z-20 w-full">
+        <header className="bg-white/90 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="flex justify-center py-6">
+              <nav className="main-menu" role="navigation">
+                <ul className="menu nav-menu flex items-center gap-4 text-[#262559] font-body">
+                  <li>
+                    <Link href="/notre-creperie" className="hover:opacity-80 px-8 py-3 text-lg font-medium" aria-current="page">
+                      Notre Crêperie
+                    </Link>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
+                  </li>
+                  <li>
+                    <Link href="/blog" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                      L'actu
+                    </Link>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
+                  </li>
+                  <li>
+                    <Link href="/reservation" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                      Réservation
+                    </Link>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
+                  </li>
+                  <li>
+                    <Link href="/contactez-nous" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      {/* Contenu principal centré */}
       <div className="relative z-10 h-full max-w-6xl mx-auto px-6 flex flex-col items-center justify-center text-center">
         {/* Logo au centre */}
         <div className="mb-8">
