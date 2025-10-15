@@ -1,26 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @import "tailwindcss";
 
+/* Defaults Icons Font */
+@font-face {
+  font-family: 'Defaults';
+  src: url('/fonts/Defaults.eot');
+  src: url('/fonts/Defaults.eot#iefixrfa9z8') format('embedded-opentype'),
+       url('/fonts/Defaults.woff') format('woff'),
+       url('/fonts/Defaults.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="Defaults-"], [class*=" Defaults-"] {
+  font-family: 'Defaults';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Defaults-dashboard:before,
+.Defaults-tachometer:before {
+  content: "\f0e4";
+}
+
+.Defaults-cutlery:before {
+  content: "\f0f5";
+}
+
+.Defaults-thumbs-o-up:before {
+  content: "\f087";
+}
+
+/* CSS Variables for fonts and colors */
+:root {
+  --font-display: "Berkshire Swash", "Times New Roman", serif;
+  --font-body: "Lora", "Georgia", serif;
+  --font-sans: "Open Sans", "Arial", sans-serif;
+  
+  /* Brand colors */
+  --color-primary: #076993;
+  --color-secondary: #262559;
+  --color-accent: #e3ad47;
+}
+
+/* Additional root variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
+  background: #ffffff;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Local font faces from /fonts */
+@font-face {
+  font-family: "Defaults";
+  src: url("/fonts/Defaults.woff") format("woff"), url("/fonts/Defaults.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BerkshireLocal";
+  src: url("/fonts/Defaults.woff") format("woff"), url("/fonts/Defaults.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LoraLocal";
+  src: url("/fonts/Defaults.woff") format("woff"), url("/fonts/Defaults.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LoraLocal";
+  src: url("/fonts/Defaults.woff") format("woff"), url("/fonts/Defaults.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSansLocal";
+  src: url("/fonts/Defaults.woff") format("woff"), url("/fonts/Defaults.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSansLocal";
+  src: url("/fonts/Defaults.woff") format("woff"), url("/fonts/Defaults.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Typography */
+.title-top-bottom-divider {
+  font-family: var(--font-display);
+}
+
+.widget-title {
+  font-family: var(--font-body);
+}
+
+/* Custom utility classes */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+/* Override template styles that interfere */
+.tp-caption {
+  display: none !important;
+}
+
+.title-top-bottom-divider {
+  font-family: "Berkshire Swash", serif !important;
+  font-size: 3.5rem !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+  color: white !important;
+  padding: 1rem 1.5rem !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+/* Hero slider styles */
+.hero-slider h2 {
+  font-family: "Berkshire Swash", serif !important;
+  font-size: 3.5rem !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+  color: white !important;
+  padding: 1rem 1.5rem !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+/* High quality image rendering */
+.high-quality-bg {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -webkit-image-rendering: -webkit-optimize-contrast;
+  -moz-image-rendering: crisp-edges;
+  -ms-image-rendering: crisp-edges;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
