@@ -15,11 +15,11 @@ export default function Header({ isHomePage = false }: HeaderProps) {
       <header className="site-header bg-white">
         <div className="site-header_in max-w-7xl mx-auto px-8">
           {/* Navigation centrée pour la page d'accueil */}
-          <div className="flex justify-center py-8">
+          <div className="flex justify-center py-6">
             <nav className="main-menu" role="navigation">
               <ul className="menu nav-menu flex items-center gap-4 text-[#262559] font-body">
                 <li>
-                  <Link href="/" className="hover:opacity-80 px-8 py-3 text-lg font-medium" aria-current="page">
+                  <Link href="/notre-creperie" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
                     Notre Crêperie
                   </Link>
                 </li>

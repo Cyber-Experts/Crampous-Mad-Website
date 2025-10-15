@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import WelcomeSection from "./components/WelcomeSection";
 import ImageSection from "./components/ImageSection";
 import NewsSection from "./components/NewsSection";
+import TopSeparator from "./components/SectionSeparator";
+import BottomSeparator from "./components/BottomSeparator";
 
 export default function Home() {
   return (
@@ -30,9 +32,12 @@ export default function Home() {
         ]}
       />
 
+      {/* Header avec logo en dessous de l'image - uniquement pour la home page */}
+      <Header isHomePage={true} />
+
       <WelcomeSection />
       
-              {/* Image de fond après "Qui sommes-nous ?" - Pleine largeur sans texte */}
+              {/* Image de fond après "Qui sommes-nous ?" avec séparateurs */}
               <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
                 <div 
                   className="absolute inset-0 w-full h-full high-quality-bg"
@@ -40,11 +45,15 @@ export default function Home() {
                     backgroundImage: `url('/images/interieur-table.jpg')`
                   }}
                 />
+                {/* Séparateur en haut de l'image */}
+                <TopSeparator color="#ffffff" overlay={true} />
+                {/* Séparateur en bas de l'image */}
+                <BottomSeparator color="#ffffff" overlay={true} />
               </section>
               
               <NewsSection />
               
-              {/* Image de fond entre l'actu et le footer - Pleine largeur sans texte */}
+              {/* Image de fond avec séparateurs en overlay */}
               <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
                 <div 
                   className="absolute inset-0 w-full h-full high-quality-bg"
@@ -52,6 +61,10 @@ export default function Home() {
                     backgroundImage: `url('/images/table-ronde-restaurent.jpg')`
                   }}
                 />
+                {/* Séparateur en haut de l'image */}
+                <TopSeparator color="#ffffff" overlay={true} />
+                {/* Séparateur en bas de l'image */}
+                <BottomSeparator color="#ffffff" overlay={true} />
               </section>
       </main>
   );
