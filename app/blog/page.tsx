@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import BottomSeparator from "../components/BottomSeparator";
+import DiamondSeparator from "../components/DiamondSeparator";
 
 export default function BlogPage() {
   const blogPosts = [
@@ -66,6 +68,8 @@ export default function BlogPage() {
             <div className="w-16 h-0.5 bg-white"></div>
           </div>
         </div>
+        {/* Séparateur en bas du header */}
+        <BottomSeparator color="#ffffff" overlay={true} />
       </header>
 
       {/* Section des articles de blog - Style identique à NewsSection */}
@@ -116,19 +120,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Séparateur décoratif */}
-      <section className="relative">
-        <div className="w-full h-4 bg-[#076993]">
-          <svg className="w-full h-full" viewBox="0 0 100 15" preserveAspectRatio="none">
-            <defs>
-              <pattern id="separator-pattern" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
-                <path fillRule="evenodd" clipRule="evenodd" fill="#076993" d="M7.504-0.008l7.504,7.504L7.504,15L0,7.496L7.504-0.008z"></path>
-              </pattern>
-            </defs>
-            <rect x="0" y="0" width="100%" height="15" fill="url(#separator-pattern)"></rect>
-          </svg>
-        </div>
-      </section>
+      <DiamondSeparator />
     </main>
   );
 }
