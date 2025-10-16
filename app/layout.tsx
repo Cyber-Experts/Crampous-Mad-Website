@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Berkshire_Swash, Lora, Open_Sans, Roboto, Cookie } from "next/font/google";
 import "./globals.css";
 import ConditionalHeader from "./components/ConditionalHeader";
+import MobileNavbar from "./components/MobileNavbar";
 import Footer from "./components/Footer";
 
 const berkshireSwash = Berkshire_Swash({
@@ -53,6 +54,7 @@ export default function RootLayout({
         className={`${berkshireSwash.variable} ${lora.variable} ${openSans.variable} ${roboto.variable} ${cookie.variable} antialiased`}
       >
         <ConditionalHeader />
+        <MobileNavbar />
         {children}
         <Footer />
       </body>

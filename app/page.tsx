@@ -33,8 +33,10 @@ export default function Home() {
         ]}
       />
 
-      {/* Header avec logo en dessous de l'image - uniquement pour la home page */}
-      <Header isHomePage={true} />
+      {/* Header avec logo en dessous de l'image - uniquement visible sur desktop */}
+      <div className="hidden md:block">
+        <Header isHomePage={true} />
+      </div>
 
       <WelcomeSection />
       
