@@ -60,29 +60,37 @@ export default function NotreCreperiePage() {
 
   return (
     <main>
-      <header className="relative h-[400px] w-full">
+      <header className="relative h-[300px] sm:h-[350px] md:h-[400px] w-full">
         <div
-          className="absolute inset-0 bg-center bg-cover"
-          style={{ backgroundImage: `url('/images/bandeau_3-1.png')` }}
+          className="absolute inset-0 bg-center bg-cover bg-no-repeat"
+          style={{ 
+            backgroundImage: `url('/images/bandeau_3-1.png')`,
+            backgroundPosition: 'center 30%'
+          }}
         />
-        <div className="relative z-10 h-full flex flex-col items-center justify-center">
-          <h1 className="text-white font-cookie mb-6" style={{ fontSize: '60px', lineHeight: '70px' }}>Notre Crêperie</h1>
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4">
+          <h1 className="text-white font-cookie mb-8 text-center drop-shadow-lg" style={{ fontSize: '48px', lineHeight: '60px' }}>
+            Notre Crêperie
+          </h1>
           
           {/* Barre avec losange */}
           <div className="flex items-center">
-            <div className="w-16 h-0.5 bg-white"></div>
-            <div className="w-2 h-2 bg-white transform rotate-45 mx-4"></div>
-            <div className="w-16 h-0.5 bg-white"></div>
+            <div className="w-16 sm:w-20 h-0.5 bg-white shadow-sm"></div>
+            <div className="w-3 h-3 bg-white transform rotate-45 mx-3 sm:mx-5 shadow-sm"></div>
+            <div className="w-16 sm:w-20 h-0.5 bg-white shadow-sm"></div>
           </div>
         </div>
         {/* Séparateur en bas du header */}
         <BottomSeparator color="#ffffff" overlay={true} />
       </header>
 
-      <section className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-        <div>
-          <h2 className="text-[#076993] mb-6 font-cookie" style={{ fontSize: '45px', lineHeight: '50px' }}>La crêperie Crampous Mad</h2>
-          <p className="text-[#262559] font-lora font-semibold mb-4" style={{ fontSize: '14px', lineHeight: '24px' }}>
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+        <div className="order-2 md:order-1">
+          <h2 className="text-[#076993] mb-6 font-cookie text-center md:text-left" style={{ fontSize: '32px', lineHeight: '40px' }}>
+            La crêperie Crampous Mad
+          </h2>
+          <p className="text-[#262559] font-lora font-semibold mb-4 text-center md:text-left" style={{ fontSize: '14px', lineHeight: '24px' }}>
             Depuis plus de 40 ans, la crêperie Crampous Mad est l'union culinaire entre l'Alsace et la Bretagne.
           </p>
           <p className="text-justify mb-4 font-lora" style={{ fontSize: '14px', lineHeight: '22px' }}>
@@ -93,8 +101,8 @@ export default function NotreCreperiePage() {
             La Crêperie Crampous Mad est un établissement du cœur commerçant de Mulhouse ; un lieu familier qui prend ses aises sur deux niveaux dans une ancienne maison alsacienne, unique en ce centre urbain. L'atmosphère réjouissante et le design ludique du restaurant oscillent entre deux styles et deux cultures. Réalisée avec une certaine fraîcheur tout en s'inscrivant dans le respect d'un cadre historique, la décoration d'inspiration tantôt bretonne tantôt alsacienne, est patinée et graphique et fait la part belle aux motifs et à des notes marines subtilement pétillantes. À la fois authentique et originale, la Crêperie souhaite trouver son public auprès de générations confondues, partageant avec plaisir la convivialité d'un met simple mais travaillé, les galettes au sarrasin et crêpes au froment.
           </p>
         </div>
-        <div className="flex items-center">
-          <div className="relative w-[570px] h-[460px] overflow-hidden bg-[#076993] mx-auto">
+        <div className="flex items-center order-1 md:order-2">
+          <div className="relative w-full max-w-[570px] h-[300px] sm:h-[400px] md:h-[460px] overflow-hidden bg-[#076993] mx-auto">
             {images.map((image, index) => (
               <img
                 key={index}
@@ -126,9 +134,9 @@ export default function NotreCreperiePage() {
         {/* Séparateur en haut de la section */}
         <TopSeparator color="#ffffff" />
         
-        <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-          <div className="flex items-center">
-            <div className="relative w-[570px] h-[460px] overflow-hidden bg-white mx-auto">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+          <div className="flex items-center order-1 md:order-1">
+            <div className="relative w-full max-w-[570px] h-[300px] sm:h-[400px] md:h-[460px] overflow-hidden bg-white mx-auto">
               {productImages.map((image, index) => (
                 <img
                   key={index}
@@ -154,8 +162,10 @@ export default function NotreCreperiePage() {
               </div>
             </div>
           </div>
-          <div>
-            <h2 className="mb-6 font-cookie" style={{ fontSize: '60px', lineHeight: '70px' }}>Des Produits Locaux</h2>
+          <div className="order-2 md:order-2">
+            <h2 className="mb-6 font-cookie text-center md:text-left" style={{ fontSize: '40px', lineHeight: '50px' }}>
+              Des Produits Locaux
+            </h2>
             <p className="text-black/90 text-justify mb-4 font-lora" style={{ fontSize: '14px', lineHeight: '22px' }}>
               Françoise et David apportent une grande importance à travailler le plus possible avec des produits locaux, issus d'une agriculture raisonnée.
             </p>
@@ -178,9 +188,11 @@ export default function NotreCreperiePage() {
         <BottomSeparator color="#ffffff" />
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-        <div>
-          <h2 className="text-[#076993] mb-6 font-cookie" style={{ fontSize: '45px', lineHeight: '50px' }}>Notre histoire</h2>
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+        <div className="order-2 md:order-1">
+          <h2 className="text-[#076993] mb-6 font-cookie text-center md:text-left" style={{ fontSize: '32px', lineHeight: '40px' }}>
+            Notre histoire
+          </h2>
           <p className="text-justify mb-4 font-lora" style={{ fontSize: '14px', lineHeight: '22px' }}>
             La crêperie Crampous Mad a été créé le vendredi 26 septembre 1980. Les heureux propriétaires Vicki et Bertrand, ont alors ouvert la première crêperie mulhousienne pouvant accueillir 50 couverts.
           </p>
@@ -200,8 +212,8 @@ export default function NotreCreperiePage() {
             La passation se fait progressivement, en toute confiance, afin qu'au-delà des murs, ce soit l'âme de la crêperie Crampous Mad qui se transmette…
           </p>
         </div>
-        <div className="flex items-center">
-          <div className="relative w-[570px] h-[460px] overflow-hidden bg-[#076993] mx-auto">
+        <div className="flex items-center order-1 md:order-2">
+          <div className="relative w-full max-w-[570px] h-[300px] sm:h-[400px] md:h-[460px] overflow-hidden bg-[#076993] mx-auto">
             {historyImages.map((image, index) => (
               <img
                 key={index}

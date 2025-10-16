@@ -15,24 +15,24 @@ export default function Header({ isHomePage = false }: HeaderProps) {
           {/* Navigation centrée pour la page d'accueil - responsive */}
           <div className="flex justify-center items-center h-16 md:h-24">
             <nav className="main-menu" role="navigation">
-              <ul className="menu nav-menu flex items-center gap-1 md:gap-2 text-[#262559] font-body italic">
+              <ul className="menu nav-menu flex items-center text-[#262559] font-body italic">
                 <li>
-                  <Link href="/notre-creperie" className="hover:opacity-80 px-2 md:px-4 py-2 text-sm md:text-base font-normal">
+                  <Link href="/notre-creperie" className="hover:opacity-80 px-2 py-2 text-sm md:text-base font-normal transition-all duration-200 hover:bg-gray-50 rounded">
                     Notre Crêperie
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog" className="hover:opacity-80 px-2 md:px-4 py-2 text-sm md:text-base font-normal">
+                  <Link href="/blog" className="hover:opacity-80 px-2 py-2 text-sm md:text-base font-normal transition-all duration-200 hover:bg-gray-50 rounded">
                     L'actu
                   </Link>
                 </li>
                 <li>
-                  <Link href="/reservation" className="hover:opacity-80 px-2 md:px-4 py-2 text-sm md:text-base font-normal">
+                  <Link href="/reservation" className="hover:opacity-80 px-2 py-2 text-sm md:text-base font-normal transition-all duration-200 hover:bg-gray-50 rounded">
                     Réservation
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contactez-nous" className="hover:opacity-80 px-2 md:px-4 py-2 text-sm md:text-base font-normal">
+                  <Link href="/contactez-nous" className="hover:opacity-80 px-2 py-2 text-sm md:text-base font-normal transition-all duration-200 hover:bg-gray-50 rounded">
                     Contact
                   </Link>
                 </li>
@@ -69,24 +69,24 @@ export default function Header({ isHomePage = false }: HeaderProps) {
             {/* Navigation desktop */}
             <div id="site-navigation" className="main-navigation hidden md:block">
               <nav className="main-menu" role="navigation">
-                <ul className="menu nav-menu flex items-center gap-2 text-[#262559] font-body">
+                <ul className="menu nav-menu flex items-center text-[#262559] font-body">
                   <li>
-                    <Link href="/" className="hover:opacity-80 px-2" aria-current="page">
+                    <Link href="/notre-creperie" className="hover:opacity-80 px-2 py-2 transition-all duration-200 hover:bg-gray-50 rounded" aria-current="page">
                       Notre Crêperie
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blog" className="hover:opacity-80 px-2">
+                    <Link href="/blog" className="hover:opacity-80 px-2 py-2 transition-all duration-200 hover:bg-gray-50 rounded">
                       L'actu
                     </Link>
                   </li>
                   <li>
-                    <Link href="/reservation" className="hover:opacity-80 px-2">
+                    <Link href="/reservation" className="hover:opacity-80 px-2 py-2 transition-all duration-200 hover:bg-gray-50 rounded">
                       Réservation
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contactez-nous" className="hover:opacity-80 px-2">
+                    <Link href="/contactez-nous" className="hover:opacity-80 px-2 py-2 transition-all duration-200 hover:bg-gray-50 rounded">
                       Contact
                     </Link>
                   </li>

@@ -76,7 +76,7 @@ export default function MobileNavbar() {
               <ul className="menu nav-menu space-y-0">
                 <li className="border-b border-gray-200">
                   <Link 
-                    href="/" 
+                    href="/notre-creperie" 
                     onClick={() => setOpen(false)} 
                     className="block py-6 text-gray-800 font-lora font-normal text-xl hover:text-black hover:font-medium transition-all duration-200 hover:pl-3 hover:bg-gray-50 relative hover:before:content-[''] hover:before:absolute hover:before:left-0 hover:before:top-0 hover:before:bottom-0 hover:before:w-1 hover:before:bg-black"
                   >

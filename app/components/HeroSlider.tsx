@@ -47,10 +47,10 @@ export default function HeroSlider({ slides, intervalMs = 5000 }: HeroSliderProp
       <div className="relative z-10 h-full max-w-6xl mx-auto px-6 flex flex-col items-center justify-center text-center">
         {/* Logo au centre */}
         <div className="mb-8">
-          <img src="/images/logo-sans-fond-ni-date.png" alt="Crampous Mad" className="w-[424px] h-[177px] mx-auto" />
+          <img src="/images/logo-sans-fond-ni-date.png" alt="Crampous Mad" className="w-64 sm:w-80 md:w-96 lg:w-[424px] h-auto mx-auto" />
         </div>
         
-        <h2 className="text-white text-4xl md:text-6xl font-normal py-4 px-6 inline-block font-display">
+        <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal py-4 px-2 sm:px-4 md:px-6 inline-block font-display text-center max-w-4xl">
           {current.title}
         </h2>
         {current.ctaHref && current.ctaLabel ? (
