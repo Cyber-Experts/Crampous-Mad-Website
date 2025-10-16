@@ -3,6 +3,9 @@ import Header from "./components/Header";
 import WelcomeSection from "./components/WelcomeSection";
 import ImageSection from "./components/ImageSection";
 import NewsSection from "./components/NewsSection";
+import TopSeparator from "./components/SectionSeparator";
+import BottomSeparator from "./components/BottomSeparator";
+import ImageWithSeparators from "./components/ImageWithSeparators";
 
 export default function Home() {
   return (
@@ -18,7 +21,7 @@ export default function Home() {
           {
             imageSrc: "/images/F17A4546.jpg",
             title: "Découvrez notre carte",
-            ctaHref: "https://crampous-mad.fr/la-carte",
+            ctaHref: "/notre-creperie",
             ctaLabel: "Découvrir",
           },
           {
@@ -30,29 +33,30 @@ export default function Home() {
         ]}
       />
 
+      {/* Header avec logo en dessous de l'image - uniquement visible sur desktop */}
+      <div className="hidden md:block">
+        <Header isHomePage={true} />
+      </div>
+
       <WelcomeSection />
       
-              {/* Image de fond après "Qui sommes-nous ?" - Pleine largeur sans texte */}
-              <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
-                <div 
-                  className="absolute inset-0 w-full h-full high-quality-bg"
-                  style={{ 
-                    backgroundImage: `url('/images/interieur-table.jpg')`
-                  }}
-                />
-              </section>
+              {/* Image de fond après "Qui sommes-nous ?" avec séparateurs */}
+              <ImageWithSeparators 
+                imageSrc="/images/interieur-table.jpg"
+                height="70vh"
+                minHeight="500px"
+                separatorColor="#ffffff"
+              />
               
               <NewsSection />
               
-              {/* Image de fond entre l'actu et le footer - Pleine largeur sans texte */}
-              <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
-                <div 
-                  className="absolute inset-0 w-full h-full high-quality-bg"
-                  style={{ 
-                    backgroundImage: `url('/images/table-ronde-restaurent.jpg')`
-                  }}
-                />
-              </section>
+              {/* Image de fond avec séparateurs en overlay */}
+              <ImageWithSeparators 
+                imageSrc="/images/table-ronde-restaurent.jpg"
+                height="70vh"
+                minHeight="500px"
+                separatorColor="#ffffff"
+              />
       </main>
   );
 }

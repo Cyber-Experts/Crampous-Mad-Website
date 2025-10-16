@@ -11,7 +11,7 @@ interface StatItem {
   suffix?: string;
 }
 
-export default function StatsSection() {
+export default function CreperieChiffres() {
   const [isVisible, setIsVisible] = useState(false);
   const [counters, setCounters] = useState({
     years: 0,
@@ -49,7 +49,7 @@ export default function StatsSection() {
       { threshold: 0.5 }
     );
 
-    const element = document.getElementById('stats-section');
+    const element = document.getElementById('creperie-chiffres');
     if (element) {
       observer.observe(element);
     }
@@ -91,13 +91,13 @@ export default function StatsSection() {
   }, [isVisible]);
 
   return (
-    <section id="stats-section" className="bg-[#076993] text-white py-2 relative overflow-hidden">
+    <section id="creperie-chiffres" className="bg-[#076993] text-white py-0 relative overflow-hidden">
       {/* Séparateur en haut de la section */}
       <TopSeparator color="#ffffff" />
       
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-display mb-4" style={{fontFamily: 'Berkshire Swash, serif'}}>
+          <h2 className="text-4xl md:text-5xl font-berkshire mb-4">
             La crêperie en chiffres
           </h2>
           <div className="w-24 h-1 bg-white mx-auto"></div>
@@ -115,7 +115,7 @@ export default function StatsSection() {
                   {stat.label.includes('Couverts') && counters.covers}
                   {stat.label.includes('Fans') && counters.fans}
                 </div>
-                <div className="text-lg text-white/90">
+                <div className="text-lg text-white/90 font-open-sans">
                   {stat.label}
                 </div>
               </div>
