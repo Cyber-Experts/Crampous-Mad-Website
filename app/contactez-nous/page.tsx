@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import ContactInfo from "../components/ContactInfo";
+import ImageWithSeparators from "../components/ImageWithSeparators";
 
 export default function ContactezNousPage() {
   const [formData, setFormData] = useState({
@@ -31,21 +31,24 @@ export default function ContactezNousPage() {
   return (
     <main>
       {/* Header avec image de fond */}
-      <header className="relative h-[400px] w-full">
+      <header className="relative h-[300px] w-full">
         <div
           className="absolute inset-0 bg-center bg-cover"
-          style={{ backgroundImage: `url('/images/Slider-construction.jpg')` }}
+          style={{ 
+            backgroundImage: `url('/images/Slider-construction.jpg')`,
+            filter: 'brightness(0.3)'
+          }}
         />
         <div className="relative z-10 h-full flex flex-col items-center justify-center">
-          <h1 className="text-[#076993] text-4xl md:text-5xl font-berkshire mb-6">
+          <h1 className="text-white font-cookie mb-6" style={{ fontSize: '72px', lineHeight: '55px' }}>
             Contactez nous
           </h1>
           
           {/* Barre avec losange */}
           <div className="flex items-center">
-            <div className="w-16 h-0.5 bg-[#076993]"></div>
-            <div className="w-2 h-2 bg-[#076993] transform rotate-45 mx-4"></div>
-            <div className="w-16 h-0.5 bg-[#076993]"></div>
+            <div className="w-16 h-0.5 bg-white"></div>
+            <div className="w-2 h-2 bg-white transform rotate-45 mx-4"></div>
+            <div className="w-16 h-0.5 bg-white"></div>
           </div>
         </div>
       </header>
@@ -55,17 +58,17 @@ export default function ContactezNousPage() {
         <div className="max-w-6xl mx-auto px-6">
           {/* Titre avec icône */}
           <div className="text-center mb-16">
-            <h2 className="text-[#076993] text-4xl md:text-5xl font-berkshire mb-8">
+            <h2 className="text-[#076993] font-cookie mb-8" style={{ fontSize: '60px', lineHeight: '50px' }}>
               Dites bonjour
             </h2>
             
             {/* Icône avec barres */}
             <div className="flex items-center justify-center mb-8">
-              <div className="w-16 h-0.5 bg-[#262559]"></div>
+              <div className="flex-1 h-px bg-[#262559]"></div>
               <div className="mx-4">
                 <img src="/images/picto1.png" alt="Picto" className="h-12 w-auto inline-block" />
               </div>
-              <div className="w-16 h-0.5 bg-[#262559]"></div>
+              <div className="flex-1 h-px bg-[#262559]"></div>
             </div>
           </div>
 
@@ -237,7 +240,13 @@ export default function ContactezNousPage() {
         </div>
       </section>
 
-      <ContactInfo />
+      {/* Image de fond avec séparateurs en haut et en bas */}
+      <ImageWithSeparators 
+        imageSrc="/images/table-ronde-restaurent.jpg"
+        height="50vh"
+        minHeight="400px"
+        separatorColor="#ffffff"
+      />
     </main>
   );
 }

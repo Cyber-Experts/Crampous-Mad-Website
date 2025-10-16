@@ -288,3 +288,72 @@ body {
 .site-header .main-menu .nav-menu li:last-child a::after {
   content: none;
 }
+
+/* Styles pour les autres pages (non-homepage) */
+.main-navigation .main-menu .nav-menu li a::after {
+  content: "\e919";
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  color: #076993;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.main-navigation .main-menu .nav-menu li:last-child a::after {
+  content: none;
+}
+
+/* Styles pour la sidebar mobile */
+.mobile-menu-container {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Animation du bouton hamburger */
+.menu-toggle {
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Styles pour les liens de navigation mobile */
+.main-menu_mobile .nav-menu li a {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.main-menu_mobile .nav-menu li a:hover {
+  transform: translateX(8px);
+}
+
+.main-menu_mobile .nav-menu li a::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #a7781d;
+  transition: width 0.3s ease;
+}
+
+.main-menu_mobile .nav-menu li a:hover::before {
+  width: 12px;
+}

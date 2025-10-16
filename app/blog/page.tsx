@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import BottomSeparator from "../components/BottomSeparator";
-import DiamondSeparator from "../components/DiamondSeparator";
+import ImageWithSeparators from "../components/ImageWithSeparators";
 
 export default function BlogPage() {
   const blogPosts = [
@@ -51,18 +51,18 @@ export default function BlogPage() {
   return (
     <main>
       {/* Header avec image de fond */}
-      <header className="relative h-[400px] w-full">
+      <header className="relative h-[300px] w-full">
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{ backgroundImage: `url('/images/bandeau_3-1.png')` }}
         />
         <div className="relative z-10 h-full flex flex-col items-center justify-center">
-        <h1 className="text-white text-4xl md:text-5xl font-berkshire mb-6">
-          L'actu
-        </h1>
+                <h1 className="text-white text-4xl md:text-5xl font-cookie mb-6" style={{ fontSize: '60px', lineHeight: '70px' }}>
+                  Événements et actualités
+                </h1>
           
           {/* Barre avec losange */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-center">
             <div className="w-16 h-0.5 bg-white"></div>
             <div className="w-2 h-2 bg-white transform rotate-45 mx-4"></div>
             <div className="w-16 h-0.5 bg-white"></div>
@@ -120,7 +120,13 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <DiamondSeparator />
+      {/* Image de fond avec séparateurs en haut et en bas */}
+      <ImageWithSeparators 
+        imageSrc="/images/table-ronde-restaurent.jpg"
+        height="40vh"
+        minHeight="300px"
+        separatorColor="#ffffff"
+      />
     </main>
   );
 }

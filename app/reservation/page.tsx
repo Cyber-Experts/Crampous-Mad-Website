@@ -1,4 +1,6 @@
 import Link from "next/link";
+import ImageWithSeparators from "../components/ImageWithSeparators";
+import BottomSeparator from "../components/BottomSeparator";
 
 export default function ReservationPage() {
   return (
@@ -7,11 +9,11 @@ export default function ReservationPage() {
       <header className="relative h-[400px] w-full">
         <div
           className="absolute inset-0 bg-center bg-cover"
-          style={{ backgroundImage: `url('/images/bandeau_3-1.png')` }}
+          style={{ backgroundImage: `url('/images/table-ronde-restaurent.jpg')` }}
         />
         <div className="relative z-10 h-full flex flex-col items-center justify-center">
-          <h1 className="text-white text-4xl md:text-5xl font-berkshire mb-6">
-            Réservation
+          <h1 className="text-white font-cookie mb-6" style={{ fontSize: '72px', lineHeight: '55px' }}>
+            Reservez votre table
           </h1>
           
           {/* Barre avec losange */}
@@ -21,6 +23,8 @@ export default function ReservationPage() {
             <div className="w-16 h-0.5 bg-white"></div>
           </div>
         </div>
+        {/* Séparateur en bas du header */}
+        <BottomSeparator color="#ffffff" overlay={true} />
       </header>
 
       {/* Section principale */}
@@ -28,24 +32,24 @@ export default function ReservationPage() {
         <div className="max-w-6xl mx-auto px-6">
           {/* Titre principal avec icône */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-normal text-[#076993] mb-8 font-berkshire">
+            <h2 className="text-[#076993] mb-8 font-cookie" style={{ fontSize: '60px', lineHeight: '50px' }}>
               Toute l'équipe est heureuse de vous accueillir
             </h2>
             
             {/* Icône avec barres */}
             <div className="flex items-center justify-center mb-8">
-              <div className="w-16 h-0.5 bg-[#262559]"></div>
+              <div className="flex-1 h-0.5 bg-[#262559]"></div>
               <div className="mx-4">
                 <img src="/images/picto1.png" alt="Icône réservation" className="w-12 h-12" />
               </div>
-              <div className="w-16 h-0.5 bg-[#262559]"></div>
+              <div className="flex-1 h-0.5 bg-[#262559]"></div>
             </div>
             
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-[#262559] mb-4 font-open-sans">
+              <p className="text-[#262559] mb-4 font-lora" style={{ fontSize: '20px', lineHeight: '30px' }}>
                 Vous pouvez réserver votre table par téléphone ou nous contacter par mail pour l'organisation de vos événements privés.
               </p>
-              <p className="text-lg font-semibold text-[#262559] font-lora">
+              <p className="font-semibold text-[#262559] font-lora" style={{ fontSize: '20px', lineHeight: '30px' }}>
                 Les crêpes et galettes sont disponibles à emporter.
               </p>
             </div>
@@ -55,10 +59,10 @@ export default function ReservationPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Réservation par téléphone */}
             <div className="text-center">
-              <h3 className="text-2xl font-normal text-[#076993] mb-4" style={{fontFamily: 'Berkshire Swash, serif'}}>
+              <h3 className="text-[#076993] mb-4 font-cookie" style={{ fontSize: '60px', lineHeight: '50px' }}>
                 Réservation par téléphone
               </h3>
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-6 font-lora" style={{ fontSize: '20px', lineHeight: '30px' }}>
                 Vous pouvez nous joindre par téléphone pour effectuer vos réservations
               </p>
               
@@ -98,10 +102,10 @@ export default function ReservationPage() {
 
             {/* Événement privé */}
             <div className="text-center">
-              <h3 className="text-2xl font-normal text-[#076993] mb-4" style={{fontFamily: 'Berkshire Swash, serif'}}>
+              <h3 className="text-[#076993] mb-4 font-cookie" style={{ fontSize: '60px', lineHeight: '50px' }}>
                 Événement privé
               </h3>
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-6 font-lora" style={{ fontSize: '20px', lineHeight: '30px' }}>
                 Si vous le souhaitez vous pouvez privatiser une partie du restaurant pour tous types d'événements privés : anniversaire, fête de famille, etc.
               </p>
               
@@ -133,6 +137,13 @@ export default function ReservationPage() {
         </div>
       </section>
 
+      {/* Image de fond avec séparateurs en haut et en bas */}
+      <ImageWithSeparators 
+        imageSrc="/images/bandeau_3-1.png"
+        height="50vh"
+        minHeight="400px"
+        separatorColor="#ffffff"
+      />
 
     </main>
   );

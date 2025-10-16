@@ -5,6 +5,7 @@ import ImageSection from "./components/ImageSection";
 import NewsSection from "./components/NewsSection";
 import TopSeparator from "./components/SectionSeparator";
 import BottomSeparator from "./components/BottomSeparator";
+import ImageWithSeparators from "./components/ImageWithSeparators";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
           {
             imageSrc: "/images/F17A4546.jpg",
             title: "Découvrez notre carte",
-                  ctaHref: "http://localhost:3000/la-carte",
+            ctaHref: "/notre-creperie",
             ctaLabel: "Découvrir",
           },
           {
@@ -38,34 +39,22 @@ export default function Home() {
       <WelcomeSection />
       
               {/* Image de fond après "Qui sommes-nous ?" avec séparateurs */}
-              <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
-                <div 
-                  className="absolute inset-0 w-full h-full high-quality-bg"
-                  style={{ 
-                    backgroundImage: `url('/images/interieur-table.jpg')`
-                  }}
-                />
-                {/* Séparateur en haut de l'image */}
-                <TopSeparator color="#ffffff" overlay={true} />
-                {/* Séparateur en bas de l'image */}
-                <BottomSeparator color="#ffffff" overlay={true} />
-              </section>
+              <ImageWithSeparators 
+                imageSrc="/images/interieur-table.jpg"
+                height="70vh"
+                minHeight="500px"
+                separatorColor="#ffffff"
+              />
               
               <NewsSection />
               
               {/* Image de fond avec séparateurs en overlay */}
-              <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
-                <div 
-                  className="absolute inset-0 w-full h-full high-quality-bg"
-                  style={{ 
-                    backgroundImage: `url('/images/table-ronde-restaurent.jpg')`
-                  }}
-                />
-                {/* Séparateur en haut de l'image */}
-                <TopSeparator color="#ffffff" overlay={true} />
-                {/* Séparateur en bas de l'image */}
-                <BottomSeparator color="#ffffff" overlay={true} />
-              </section>
+              <ImageWithSeparators 
+                imageSrc="/images/table-ronde-restaurent.jpg"
+                height="70vh"
+                minHeight="500px"
+                separatorColor="#ffffff"
+              />
       </main>
   );
 }

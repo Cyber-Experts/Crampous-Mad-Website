@@ -17,12 +17,12 @@ export default function Footer() {
       
       {/* Main footer content - WHITE background */}
       <div className="footer-widgets bg-white text-gray-800">
-        <div className="footer-widgets_in max-w-6xl mx-auto px-6 py-12">
-          <div className="footer-widgets_area grid md:grid-cols-3 gap-8">
+        <div className="footer-widgets_in max-w-6xl mx-auto px-6 py-8">
+          <div className="footer-widgets_area grid md:grid-cols-3 gap-6">
             {/* Contact */}
             <aside id="stm_contact-2" className="widget widget_stm_contact">
-              <h1 className="widget-title text-lg mb-6 font-body font-bold text-[#076993]" style={{ fontSize: '16px', lineHeight: '35px' }}>Nous contacter</h1>
-              <ul className="stm_contact_list space-y-3 text-gray-800 font-sans" style={{ fontSize: '13px' }}>
+              <h1 className="widget-title text-lg mb-4 font-body font-bold text-[#076993]" style={{ fontSize: '16px', lineHeight: '35px' }}>Nous contacter</h1>
+              <ul className="stm_contact_list space-y-2 text-gray-800 font-sans" style={{ fontSize: '13px' }}>
                 <li className="contact-list_item __address flex items-center gap-3">
                   <svg className="w-4 h-4 text-[#076993] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
@@ -47,7 +47,7 @@ export default function Footer() {
             
             {/* Facebook */}
             <aside id="stm_facebook-2" className="widget widget_stm_facebook">
-              <h1 className="widget-title text-lg mb-6 font-body font-bold text-[#076993]" style={{ fontSize: '16px', lineHeight: '35px' }}>Facebook</h1>
+              <h1 className="widget-title text-lg mb-4 font-body font-bold text-[#076993]" style={{ fontSize: '16px', lineHeight: '35px' }}>Facebook</h1>
               <div className="fb-page-container">
                 <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
                   <div className="flex items-center gap-3 mb-3">
@@ -76,8 +76,8 @@ export default function Footer() {
             
             {/* Schedule */}
             <aside id="stm_schedule-2" className="widget widget_stm_schedule">
-              <h1 className="widget-title text-lg mb-6 font-body font-bold text-[#076993]" style={{ fontSize: '16px', lineHeight: '35px' }}>Service en continu</h1>
-              <ul className="stm_schedule_list space-y-3 text-gray-800 font-sans" style={{ fontSize: '13px' }}>
+              <h1 className="widget-title text-lg mb-4 font-body font-bold text-[#076993]" style={{ fontSize: '16px', lineHeight: '35px' }}>Service en continu</h1>
+              <ul className="stm_schedule_list space-y-2 text-gray-800 font-sans" style={{ fontSize: '13px' }}>
                 <li className="schedule-list_item flex items-center gap-3">
                   <svg className="w-4 h-4 text-[#076993] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -110,7 +110,7 @@ export default function Footer() {
       
       {/* Bottom blue bar */}
       <div className="site-info bg-[#076993]">
-        <div className="site-info_in max-w-6xl mx-auto px-6 py-4">
+        <div className="site-info_in max-w-6xl mx-auto px-6 py-3">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="copyright text-white font-sans" style={{ fontSize: '13px' }}>
               <a 
@@ -119,7 +119,7 @@ export default function Footer() {
                 href="https://cyberexperts.io" 
                 className="hover:underline"
               >
-                © Cyber Experts 2023
+                © Cyber Experts 2025
               </a>
               {" - "}
               <a 
