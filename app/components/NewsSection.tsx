@@ -33,7 +33,7 @@ export default function NewsSection() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Titre avec style plus marqué */}
         <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl text-secondary mb-4 font-berkshire">
+        <h2 className="text-4xl md:text-5xl text-secondary mb-4 font-display">
           L'actu
         </h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
@@ -51,17 +51,17 @@ export default function NewsSection() {
               
               {/* Contenu avec design carré - flex pour aligner les boutons */}
               <div className="p-4 flex flex-col flex-grow">
-          <h3 className="text-lg font-semibold mb-2 text-secondary font-lora">
+          <h3 className="text-lg font-semibold mb-2 text-secondary font-body">
             {article.title}
           </h3>
-          <p className="text-gray-600 text-sm mb-4 leading-relaxed flex-grow font-open-sans">
+          <p className="text-gray-600 text-sm mb-4 leading-relaxed flex-grow font-sans">
             {article.description}
           </p>
                 
                 {/* Bouton carré avec style du site - aligné en bas */}
                 <Link 
                   href={article.href} 
-                  className="inline-block bg-secondary hover:bg-primary text-white px-4 py-2 text-sm font-medium transition-colors duration-300 border-2 border-secondary hover:border-primary mt-auto font-lora"
+                  className="inline-block bg-secondary hover:bg-primary text-white px-4 py-2 text-sm font-medium transition-colors duration-300 border-2 border-secondary hover:border-primary mt-auto font-body"
                 >
                   Lire la suite
                 </Link>

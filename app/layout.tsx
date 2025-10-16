@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Berkshire_Swash, Lora, Open_Sans, Roboto } from "next/font/google";
+import { Berkshire_Swash, Lora, Open_Sans, Roboto, Cookie } from "next/font/google";
 import "./globals.css";
 import ConditionalHeader from "./components/ConditionalHeader";
 import Footer from "./components/Footer";
@@ -30,6 +30,12 @@ const roboto = Roboto({
   weight: ["500"],
 });
 
+const cookie = Cookie({
+  variable: "--font-cookie",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
   title: "Notre Crêperie - Crampous Mad",
   description:
@@ -44,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="fr-FR">
       <body
-        className={`${berkshireSwash.variable} ${lora.variable} ${openSans.variable} ${roboto.variable} antialiased`}
+        className={`${berkshireSwash.variable} ${lora.variable} ${openSans.variable} ${roboto.variable} ${cookie.variable} antialiased`}
       >
         <ConditionalHeader />
         {children}

@@ -15,35 +15,26 @@ export default function Header({ isHomePage = false }: HeaderProps) {
       <header className="site-header bg-white">
         <div className="site-header_in max-w-7xl mx-auto px-8">
           {/* Navigation centrée pour la page d'accueil */}
-          <div className="flex justify-center py-6">
+          <div className="flex justify-center items-center h-24">
             <nav className="main-menu" role="navigation">
-              <ul className="menu nav-menu flex items-center gap-4 text-[#262559] font-lora">
+              <ul className="menu nav-menu flex items-center gap-2 text-[#262559] font-body italic">
                 <li>
-                  <Link href="/notre-creperie" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                  <Link href="/notre-creperie" className="hover:opacity-80 px-4 py-2 text-base font-normal">
                     Notre Crêperie
                   </Link>
                 </li>
-                <li className="flex items-center">
-                  <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
-                </li>
                 <li>
-                  <Link href="/blog" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                  <Link href="/blog" className="hover:opacity-80 px-4 py-2 text-base font-normal">
                     L'actu
                   </Link>
                 </li>
-                <li className="flex items-center">
-                  <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
-                </li>
                 <li>
-                  <Link href="/reservation" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                  <Link href="/reservation" className="hover:opacity-80 px-4 py-2 text-base font-normal">
                     Réservation
                   </Link>
                 </li>
-                <li className="flex items-center">
-                  <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
-                </li>
                 <li>
-                  <Link href="/contactez-nous" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                  <Link href="/contactez-nous" className="hover:opacity-80 px-4 py-2 text-base font-normal">
                     Contact
                   </Link>
                 </li>
@@ -85,7 +76,7 @@ export default function Header({ isHomePage = false }: HeaderProps) {
 
           <div id="site-navigation" className="main-navigation hidden md:block">
             <nav className="main-menu" role="navigation">
-                    <ul className="menu nav-menu flex items-center gap-2 text-[#262559] font-lora">
+                    <ul className="menu nav-menu flex items-center gap-2 text-[#262559] font-body">
                 <li>
                   <Link href="/" className="hover:opacity-80 px-2" aria-current="page">
                     Notre Crêperie
@@ -127,7 +118,7 @@ export default function Header({ isHomePage = false }: HeaderProps) {
           aria-expanded={open ? "true" : "false"}
         >
           <nav role="navigation">
-                  <ul className="menu nav-menu flex flex-col gap-3 text-[#262559] font-lora">
+                  <ul className="menu nav-menu flex flex-col gap-3 text-[#262559] font-body">
               <li>
                 <Link href="/" onClick={() => setOpen(false)} className="py-1">
                   Notre Crêperie

@@ -2,11 +2,15 @@
 
 /* Font Variables */
 .font-berkshire {
-  font-family: var(--font-berkshire-swash), Arial, sans-serif;
+  font-family: var(--font-berkshire-swash), cursive;
+}
+
+.font-cookie {
+  font-family: var(--font-cookie), cursive;
 }
 
 .font-lora {
-  font-family: var(--font-lora), Arial, sans-serif;
+  font-family: var(--font-lora), serif;
 }
 
 .font-open-sans {
@@ -54,9 +58,11 @@
 
 /* CSS Variables for fonts and colors */
 :root {
-  --font-display: "Berkshire Swash", "Times New Roman", serif;
-  --font-body: "Lora", "Georgia", serif;
-  --font-sans: "Open Sans", "Arial", sans-serif;
+  --font-display: var(--font-berkshire-swash), cursive;
+  --font-body: var(--font-lora), serif;
+  --font-sans: var(--font-open-sans), sans-serif;
+  --font-cookie: var(--font-cookie), cursive;
+  --font-roboto: var(--font-roboto), sans-serif;
   
   /* Brand colors */
   --color-primary: #076993;
@@ -73,7 +79,7 @@
 body {
   background: #ffffff;
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-open-sans), sans-serif;
 }
 
 /* Local font faces from /fonts */
@@ -83,6 +89,18 @@ body {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+/* Icomoon font for losanges */
+@font-face {
+  font-family: 'icomoon';
+  src: url('/fonts/icomoon.eot');
+  src: url('/fonts/icomoon.eot#iefix') format('embedded-opentype'),
+       url('/fonts/icomoon.woff') format('woff'),
+       url('/fonts/icomoon.ttf') format('truetype'),
+       url('/fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -134,6 +152,27 @@ body {
   font-family: var(--font-body);
 }
 
+/* Additional typography classes */
+.font-display {
+  font-family: var(--font-berkshire-swash), cursive;
+}
+
+.font-body {
+  font-family: var(--font-lora), serif;
+}
+
+.font-sans {
+  font-family: var(--font-open-sans), sans-serif;
+}
+
+.font-cookie {
+  font-family: var(--font-cookie), cursive;
+}
+
+.font-roboto {
+  font-family: var(--font-roboto), sans-serif;
+}
+
 /* Custom utility classes */
 .text-primary {
   color: var(--color-primary);
@@ -165,7 +204,7 @@ body {
 }
 
 .title-top-bottom-divider {
-  font-family: "Berkshire Swash", serif !important;
+  font-family: var(--font-berkshire-swash), cursive !important;
   font-size: 3.5rem !important;
   line-height: 1.2 !important;
   font-weight: 400 !important;
@@ -177,7 +216,7 @@ body {
 
 /* Hero slider styles */
 .hero-slider h2 {
-  font-family: "Berkshire Swash", serif !important;
+  font-family: var(--font-berkshire-swash), cursive !important;
   font-size: 3.5rem !important;
   line-height: 1.2 !important;
   font-weight: 400 !important;
@@ -198,4 +237,54 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Home page navbar specific styles */
+.site-header .main-menu .nav-menu {
+  gap: 0.5rem !important;
+  height: 100px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.site-header .main-menu .nav-menu li {
+  display: flex;
+  align-items: center;
+}
+
+.site-header .main-menu .nav-menu li a {
+  font-family: var(--font-lora), serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: 1.125rem !important;
+  color: #262559 !important;
+  padding: 0.75rem 1.25rem !important;
+  text-decoration: none !important;
+  transition: opacity 0.3s ease !important;
+  line-height: 1.2 !important;
+}
+
+.site-header .main-menu .nav-menu li a:hover {
+  opacity: 0.8 !important;
+}
+
+/* Losanges avec pseudo-éléments comme dans le template original */
+.site-header .main-menu .nav-menu li a::after {
+  content: "\e919";
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  color: #076993;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.site-header .main-menu .nav-menu li:last-child a::after {
+  content: none;
 }

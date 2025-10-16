@@ -50,13 +50,13 @@ export default function HeroSlider({ slides, intervalMs = 5000 }: HeroSliderProp
           <img src="/images/logo-sans-fond-ni-date.png" alt="Crampous Mad" className="w-[424px] h-[177px] mx-auto" />
         </div>
         
-        <h2 className="text-white text-4xl md:text-6xl font-normal py-4 px-6 inline-block font-berkshire">
+        <h2 className="text-white text-4xl md:text-6xl font-normal py-4 px-6 inline-block font-display">
           {current.title}
         </h2>
         {current.ctaHref && current.ctaLabel ? (
           <Link
             href={current.ctaHref}
-            className="mt-8 inline-block text-white bg-black/75 hover:bg-white hover:text-black transition-colors px-6 py-3 text-base font-medium font-roboto font-medium"
+            className="mt-8 inline-block text-white bg-black/75 hover:bg-white hover:text-black transition-colors px-6 py-3 text-base font-medium font-roboto"
             style={{ fontSize: '17px' }}
           >
             {current.ctaLabel}
