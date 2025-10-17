@@ -33,7 +33,7 @@ export default function MobileNavbar() {
       {/* Bouton hamburger flottant en haut à droite - uniquement sur mobile */}
       <div className="md:hidden fixed top-4 right-4 z-50">
         <button
-          className="p-2 hover:bg-white/10 transition-all duration-300"
+          className="p-2 bg-white/90 hover:bg-white transition-all duration-300 shadow-lg border-2 border-black"
           aria-controls="mobile-menu"
           aria-expanded={open ? "true" : "false"}
           onClick={() => setOpen((v) => !v)}
@@ -78,8 +78,10 @@ export default function MobileNavbar() {
                   <Link 
                     href="/notre-creperie" 
                     onClick={() => setOpen(false)} 
-                    className="block py-6 text-gray-800 font-lora font-normal text-xl hover:text-black hover:font-medium transition-all duration-200 hover:pl-3 hover:bg-gray-50 relative hover:before:content-[''] hover:before:absolute hover:before:left-0 hover:before:top-0 hover:before:bottom-0 hover:before:w-1 hover:before:bg-black"
+                    className="flex items-center py-6 text-gray-800 font-lora font-normal text-xl no-underline hover:no-underline focus:no-underline active:no-underline"
+                    style={{ textDecoration: 'none' }}
                   >
+                    <span className="w-2 h-2 bg-gray-400 transform rotate-45 mr-3"></span>
                     Notre Crêperie
                   </Link>
                 </li>
@@ -87,8 +89,10 @@ export default function MobileNavbar() {
                   <Link 
                     href="/blog" 
                     onClick={() => setOpen(false)} 
-                    className="block py-6 text-gray-800 font-lora font-normal text-xl hover:text-black hover:font-medium transition-all duration-200 hover:pl-3 hover:bg-gray-50 relative hover:before:content-[''] hover:before:absolute hover:before:left-0 hover:before:top-0 hover:before:bottom-0 hover:before:w-1 hover:before:bg-black"
+                    className="flex items-center py-6 text-gray-800 font-lora font-normal text-xl no-underline hover:no-underline focus:no-underline active:no-underline"
+                    style={{ textDecoration: 'none' }}
                   >
+                    <span className="w-2 h-2 bg-gray-400 transform rotate-45 mr-3"></span>
                     L'actu
                   </Link>
                 </li>
@@ -96,8 +100,10 @@ export default function MobileNavbar() {
                   <Link 
                     href="/reservation" 
                     onClick={() => setOpen(false)} 
-                    className="block py-6 text-gray-800 font-lora font-normal text-xl hover:text-black hover:font-medium transition-all duration-200 hover:pl-3 hover:bg-gray-50 relative hover:before:content-[''] hover:before:absolute hover:before:left-0 hover:before:top-0 hover:before:bottom-0 hover:before:w-1 hover:before:bg-black"
+                    className="flex items-center py-6 text-gray-800 font-lora font-normal text-xl no-underline hover:no-underline focus:no-underline active:no-underline"
+                    style={{ textDecoration: 'none' }}
                   >
+                    <span className="w-2 h-2 bg-gray-400 transform rotate-45 mr-3"></span>
                     Réservation
                   </Link>
                 </li>
@@ -105,8 +111,10 @@ export default function MobileNavbar() {
                   <Link 
                     href="/contactez-nous" 
                     onClick={() => setOpen(false)} 
-                    className="block py-6 text-gray-800 font-lora font-normal text-xl hover:text-black hover:font-medium transition-all duration-200 hover:pl-3 hover:bg-gray-50 relative hover:before:content-[''] hover:before:absolute hover:before:left-0 hover:before:top-0 hover:before:bottom-0 hover:before:w-1 hover:before:bg-black"
+                    className="flex items-center py-6 text-gray-800 font-lora font-normal text-xl no-underline hover:no-underline focus:no-underline active:no-underline"
+                    style={{ textDecoration: 'none' }}
                   >
+                    <span className="w-2 h-2 bg-gray-400 transform rotate-45 mr-3"></span>
                     Contact
                   </Link>
                 </li>

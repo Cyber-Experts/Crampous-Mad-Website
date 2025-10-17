@@ -87,7 +87,7 @@ export default function BlogPage() {
                 
                 {/* Contenu avec design carré - flex pour aligner les boutons */}
                 <div className="p-4 flex flex-col flex-grow">
-          <h3 className="text-lg font-lora font-semibold mb-2 text-[#262559]">
+          <h3 className="text-xl font-lora font-bold mb-3 text-[#262559] leading-tight">
             <Link href={post.href} className="hover:text-[#076993] transition-colors">
               {post.title}
             </Link>
@@ -102,14 +102,14 @@ export default function BlogPage() {
                     <div className="w-6 h-0.5 bg-[#076993]"></div>
                   </div>
                   
-                  <p className="text-gray-600 text-sm mb-4 font-open-sans leading-relaxed flex-grow">
+                  <p className="text-gray-700 text-base mb-4 font-lora leading-relaxed flex-grow">
                     {post.excerpt}
                   </p>
                   
                   {/* Bouton carré avec style du site - aligné en bas */}
                   <Link 
                     href={post.href} 
-                    className="inline-block bg-[#262559] hover:bg-[#076993] text-white px-4 py-2 text-sm font-lora font-medium transition-colors duration-300 border-2 border-[#262559] hover:border-[#076993] mt-auto"
+                    className="inline-block bg-[#262559] hover:bg-[#076993] text-white px-6 py-3 text-sm font-lora font-semibold transition-colors duration-300 border-2 border-[#262559] hover:border-[#076993] mt-auto"
                   >
                     Lire la suite
                   </Link>
