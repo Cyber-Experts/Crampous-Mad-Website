@@ -35,33 +35,33 @@ export default function CarnavalMulhousePage() {
           <img 
             src="/images/carnaval-de-mulhouse-chars-place-reunion-58533-470-0.jpg" 
             alt="Carnaval de Mulhouse" 
-            className="w-full h-64 object-cover rounded-lg shadow-lg"
+            className="w-full h-64 object-cover shadow-lg"
           />
         </div>
 
         {/* Titre principal */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-[#076993] mb-4">
+          <h2 className="text-3xl font-bold text-[#076993] mb-4 font-lora">
             CARNAVAL DE MULHOUSE – DU 3 AU 5 MARS 2017
           </h2>
         </div>
 
         {/* Contenu principal */}
         <div className="prose prose-lg max-w-none">
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-800 mb-6 text-lg font-lora leading-relaxed">
             Du 3 au 5 mars 2017 se tiendra la nouvelle édition du Carnaval de Mulhouse. Le thème de cette nouvelle édition sera le <strong>« Carnaval des Frontières du Grand Est »</strong>.
           </p>
 
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-800 mb-6 text-lg font-lora leading-relaxed">
             Métamorphosé cette année, des nouveautés sont prévues pour émerveiller petits et grands et ainsi participer à la vie de la ville de Mulhouse : l'élection du prince du Carnaval, un concours de fresques, un village de Carnaval, le retour d'une cavalcade de nuit et d'autres animations ! Le Carnaval réputé pour mettre en avant les traditions locales mettra à l'honneur cette année la Suisse, l'Allemagne, la Belgique, l'Alsace et particulièrement Mulhouse.
           </p>
 
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-800 mb-6 text-lg font-lora leading-relaxed">
             Toujours dans la bonne humeur, le Carnaval de Mulhouse est l'opportunité de vivre un moment de partage rythmé par les jets de confettis annuels !
           </p>
 
-          <div className="bg-[#076993] text-white p-6 rounded-lg mb-8">
-            <p className="text-center text-lg">
+          <div className="bg-[#076993] text-white p-6 mb-8">
+            <p className="text-center text-lg font-lora">
               <strong>A l'occasion de ces trois jours de fête, la crêperie Crampous Mad vous invite à venir déguster ses délicieuses galettes au sarrasin !</strong> En plein centre-ville de Mulhouse, la crêperie est idéalement située pour déjeuner, goûter ou dîner durant le Carnaval !
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function CarnavalMulhousePage() {
         <div className="mt-12 text-center">
           <Link 
             href="/blog" 
-            className="inline-block bg-[#076993] text-white px-6 py-3 rounded hover:bg-[#065a7a] transition-colors"
+            className="inline-block bg-[#076993] text-white px-8 py-4 font-lora font-semibold hover:bg-[#065a7a] transition-colors"
           >
             ← Retour à L'actu
           </Link>

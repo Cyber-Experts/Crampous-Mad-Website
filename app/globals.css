@@ -214,16 +214,18 @@ body {
   white-space: nowrap !important;
 }
 
-/* Hero slider styles */
+/* Hero slider styles - Responsive */
 .hero-slider h2 {
   font-family: var(--font-berkshire-swash), cursive !important;
-  font-size: 3.5rem !important;
+  font-size: clamp(1.5rem, 4vw, 3.5rem) !important;
   line-height: 1.2 !important;
   font-weight: 400 !important;
   color: white !important;
-  padding: 1rem 1.5rem !important;
+  padding: 0.5rem 1rem !important;
   display: inline-block !important;
-  white-space: nowrap !important;
+  white-space: normal !important;
+  text-align: center !important;
+  max-width: 100% !important;
 }
 
 /* High quality image rendering */
@@ -239,13 +241,14 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Home page navbar specific styles */
+/* Home page navbar specific styles - Responsive */
 .site-header .main-menu .nav-menu {
-  gap: 0.5rem !important;
-  height: 100px !important;
+  gap: 0.25rem !important;
+  height: auto !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  flex-wrap: wrap !important;
 }
 
 .site-header .main-menu .nav-menu li {
@@ -257,12 +260,13 @@ body {
   font-family: var(--font-lora), serif !important;
   font-style: italic !important;
   font-weight: 400 !important;
-  font-size: 1.125rem !important;
+  font-size: clamp(0.875rem, 2vw, 1.125rem) !important;
   color: #262559 !important;
-  padding: 0.75rem 1.25rem !important;
+  padding: 0.5rem 0.75rem !important;
   text-decoration: none !important;
   transition: opacity 0.3s ease !important;
   line-height: 1.2 !important;
+  white-space: nowrap !important;
 }
 
 .site-header .main-menu .nav-menu li a:hover {
@@ -330,6 +334,86 @@ body {
 
 .menu-toggle:hover {
   transform: scale(1.1);
+}
+
+/* Correction des séparateurs */
+.top-separator,
+.bottom-separator {
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Correction des espaces entre les sections */
+section {
+  position: relative;
+}
+
+/* Assurer que les séparateurs sont parfaitement collés */
+.responsive-image-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.responsive-image-section .top-separator,
+.responsive-image-section .bottom-separator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* Styles responsive pour les images */
+.responsive-image-section {
+  height: 50vh !important;
+  min-height: 300px !important;
+}
+
+.responsive-image-section .high-quality-bg {
+  background-position: center 30% !important;
+}
+
+@media (min-width: 768px) {
+  .responsive-image-section {
+    height: 70vh !important;
+    min-height: 500px !important;
+  }
+  
+  .responsive-image-section .high-quality-bg {
+    background-position: center !important;
+  }
+}
+
+/* Centrage et espacement global */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Assurer que les sections sont bien collées */
+section + section {
+  margin-top: 0;
+}
+
+/* Correction des espaces dans les grilles */
+.grid {
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    gap: 0.5rem;
+  }
 }
 
 /* Styles pour les liens de navigation mobile */

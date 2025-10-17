@@ -28,10 +28,10 @@ export default function ReservationPage() {
       </header>
 
       {/* Section principale */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           {/* Titre principal avec icône */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-[#076993] mb-8 font-cookie" style={{ fontSize: '60px', lineHeight: '50px' }}>
               Toute l'équipe est heureuse de vous accueillir
             </h2>
@@ -56,13 +56,13 @@ export default function ReservationPage() {
           </div>
 
           {/* Section des 3 colonnes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
             {/* Réservation par téléphone */}
             <div className="text-center">
-              <h3 className="text-[#076993] mb-4 font-cookie" style={{ fontSize: '60px', lineHeight: '50px' }}>
+              <h3 className="text-[#076993] mb-6 font-cookie" style={{ fontSize: '60px', lineHeight: '50px' }}>
                 Réservation par téléphone
               </h3>
-              <p className="text-gray-700 mb-6 font-lora" style={{ fontSize: '20px', lineHeight: '30px' }}>
+              <p className="text-gray-700 mb-8 font-lora" style={{ fontSize: '20px', lineHeight: '30px' }}>
                 Vous pouvez nous joindre par téléphone pour effectuer vos réservations
               </p>
               
@@ -92,20 +92,20 @@ export default function ReservationPage() {
             </div>
 
             {/* Image centrale */}
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center py-8">
               <img 
                 src="/images/F17A4434.jpg" 
                 alt="Intérieur de la crêperie" 
-                className="w-full h-64 object-cover shadow-lg"
+                className="w-full h-80 object-cover shadow-lg rounded-lg"
               />
             </div>
 
             {/* Événement privé */}
             <div className="text-center">
-              <h3 className="text-[#076993] mb-4 font-cookie" style={{ fontSize: '60px', lineHeight: '50px' }}>
+              <h3 className="text-[#076993] mb-6 font-cookie" style={{ fontSize: '60px', lineHeight: '50px' }}>
                 Événement privé
               </h3>
-              <p className="text-gray-700 mb-6 font-lora" style={{ fontSize: '20px', lineHeight: '30px' }}>
+              <p className="text-gray-700 mb-8 font-lora" style={{ fontSize: '20px', lineHeight: '30px' }}>
                 Si vous le souhaitez vous pouvez privatiser une partie du restaurant pour tous types d'événements privés : anniversaire, fête de famille, etc.
               </p>
               

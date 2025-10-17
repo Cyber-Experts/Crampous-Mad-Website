@@ -12,7 +12,7 @@ export default function BottomSeparator({
   const separatorId = "row-bottom-separator_461";
   
   return (
-    <div className={`w-full h-[8px] ${overlay ? 'absolute z-10' : ''} bottom-0 ${className}`}>
+    <div className={`w-full h-[8px] ${overlay ? 'absolute z-10' : ''} bottom-0 ${className}`} style={{ marginBottom: '-1px' }}>
       <svg x="0px" y="0px" width="100%" height="8px" className="w-full h-full" shapeRendering="crispEdges">
         <defs>
           <pattern id={separatorId} x="0" y="0" width="15" height="8" patternUnits="userSpaceOnUse">
