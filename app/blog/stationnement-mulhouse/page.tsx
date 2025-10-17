@@ -32,24 +32,24 @@ export default function StationnementMulhousePage() {
 
         {/* Introduction */}
         <div className="prose prose-lg max-w-none mb-8">
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-xl text-gray-800 leading-relaxed font-lora">
             Découvrez nos trucs et astuces pour se <strong>stationner au centre ville de Mulhouse</strong> afin de venir déguster une bonne galette dans votre Crêperie Crampous Mad.
           </p>
         </div>
 
         {/* Stationnement en surface */}
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold text-[#076993] mb-6">Stationnement en surface (jusqu'à 4h)</h2>
-          <p className="text-gray-700 mb-4">
+          <h2 className="text-3xl font-bold text-[#076993] mb-6 font-lora">Stationnement en surface (jusqu'à 4h)</h2>
+          <p className="text-gray-800 mb-4 text-lg font-lora leading-relaxed">
             Quatre zones de stationnement selon ses besoins : de 15 minutes à 4 heures ( <a href="#" className="text-[#076993] hover:underline">Télécharger le plan (pdf, 478.4 Ko)</a> ) :
           </p>
           
           <ul className="space-y-4">
             <li className="flex items-start">
               <span className="w-4 h-4 bg-red-500 rounded-full mt-2 mr-4 flex-shrink-0"></span>
-              <div>
-                <strong>Stationnement limité à 30 minutes</strong> (rouge)<br/>
-                A proximité des commerces ou de la gare, une centaine de places réparties dans 8 sites proposent un stationnement gratuit limité à 30 minutes. Idéal pour des courses rapides en centre-ville ou accompagner les voyageurs.
+              <div className="font-lora">
+                <strong className="text-lg">Stationnement limité à 30 minutes</strong> (rouge)<br/>
+                <span className="text-gray-800 leading-relaxed">A proximité des commerces ou de la gare, une centaine de places réparties dans 8 sites proposent un stationnement gratuit limité à 30 minutes. Idéal pour des courses rapides en centre-ville ou accompagner les voyageurs.</span>
               </div>
             </li>
             <li className="flex items-start">
@@ -77,9 +77,9 @@ export default function StationnementMulhousePage() {
           </p>
           
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li className="flex items-center p-4 bg-gray-50 rounded">
+            <li className="flex items-center p-4 bg-gray-50">
               <i className="Defaults-car mr-3 text-[#076993]"></i>
-              <span>Parking Centre (650 places)</span>
+              <span className="font-lora text-gray-800">Parking Centre (650 places)</span>
             </li>
             <li className="flex items-center p-4 bg-gray-50 rounded">
               <i className="Defaults-car mr-3 text-[#076993]"></i>
@@ -202,8 +202,8 @@ export default function StationnementMulhousePage() {
         </section>
 
         {/* Remerciements */}
-        <div className="bg-[#076993] text-white p-6 rounded-lg">
-          <p className="text-center">
+        <div className="bg-[#076993] text-white p-6">
+          <p className="text-center font-lora text-lg">
             <strong>Merci aux vitrines de Mulhouse pour les informations !</strong>
           </p>
         </div>
@@ -212,7 +212,7 @@ export default function StationnementMulhousePage() {
         <div className="mt-12 text-center">
           <Link 
             href="/blog" 
-            className="inline-block bg-[#076993] text-white px-6 py-3 rounded hover:bg-[#065a7a] transition-colors"
+            className="inline-block bg-[#076993] text-white px-8 py-4 font-lora font-semibold hover:bg-[#065a7a] transition-colors"
           >
             ← Retour à L'actu
           </Link>

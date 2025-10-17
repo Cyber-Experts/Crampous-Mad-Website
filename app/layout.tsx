@@ -1,17 +1,40 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Berkshire_Swash, Lora, Open_Sans, Roboto, Cookie } from "next/font/google";
 import "./globals.css";
 import ConditionalHeader from "./components/ConditionalHeader";
+import MobileNavbar from "./components/MobileNavbar";
 import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const berkshireSwash = Berkshire_Swash({
+  variable: "--font-berkshire-swash",
   subsets: ["latin"],
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700", "800"],
+  style: ["normal", "italic"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["500"],
+});
+
+const cookie = Cookie({
+  variable: "--font-cookie",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -28,9 +51,10 @@ export default function RootLayout({
   return (
     <html lang="fr-FR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${berkshireSwash.variable} ${lora.variable} ${openSans.variable} ${roboto.variable} ${cookie.variable} antialiased`}
       >
         <ConditionalHeader />
+        <MobileNavbar />
         {children}
         <Footer />
       </body>

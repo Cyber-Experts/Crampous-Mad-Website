@@ -1,49 +1,38 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 
 interface HeaderProps {
   isHomePage?: boolean;
 }
 
 export default function Header({ isHomePage = false }: HeaderProps) {
-  const [open, setOpen] = useState(false);
 
   if (isHomePage) {
     return (
       <header className="site-header bg-white">
-        <div className="site-header_in max-w-7xl mx-auto px-8">
-          {/* Navigation centrée pour la page d'accueil */}
-          <div className="flex justify-center py-8">
+        <div className="site-header_in max-w-7xl mx-auto px-4 md:px-8">
+          {/* Navigation centrée pour la page d'accueil - responsive */}
+          <div className="flex justify-center items-center h-16 md:h-24">
             <nav className="main-menu" role="navigation">
-              <ul className="menu nav-menu flex items-center gap-4 text-[#262559] font-body">
+              <ul className="menu nav-menu flex items-center text-[#262559] font-body italic">
                 <li>
-                  <Link href="/" className="hover:opacity-80 px-8 py-3 text-lg font-medium" aria-current="page">
+                  <Link href="/notre-creperie" className="hover:opacity-80 px-2 py-2 text-sm md:text-base font-normal transition-all duration-200 hover:bg-gray-50 rounded">
                     Notre Crêperie
                   </Link>
                 </li>
-                <li className="flex items-center">
-                  <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
-                </li>
                 <li>
-                  <Link href="/blog" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                  <Link href="/blog" className="hover:opacity-80 px-2 py-2 text-sm md:text-base font-normal transition-all duration-200 hover:bg-gray-50 rounded">
                     L'actu
                   </Link>
                 </li>
-                <li className="flex items-center">
-                  <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
-                </li>
                 <li>
-                  <Link href="/reservation" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                  <Link href="/reservation" className="hover:opacity-80 px-2 py-2 text-sm md:text-base font-normal transition-all duration-200 hover:bg-gray-50 rounded">
                     Réservation
                   </Link>
                 </li>
-                <li className="flex items-center">
-                  <div className="w-3 h-3 bg-[#076993] transform rotate-45 mx-6"></div>
-                </li>
                 <li>
-                  <Link href="/contactez-nous" className="hover:opacity-80 px-8 py-3 text-lg font-medium">
+                  <Link href="/contactez-nous" className="hover:opacity-80 px-2 py-2 text-sm md:text-base font-normal transition-all duration-200 hover:bg-gray-50 rounded">
                     Contact
                   </Link>
                 </li>
@@ -56,103 +45,60 @@ export default function Header({ isHomePage = false }: HeaderProps) {
   }
 
   return (
-    <header className="site-header bg-white">
-      <div className="site-header_in max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
-          <div className="site-branding flex items-center gap-4">
-            <div className="site-logo">
-              <Link href="/" aria-label="Accueil">
-                <img
-                  src="/images/logo-sans-fond-ni-date.png"
-                  alt="Crampous Mad"
-                  className="h-12 w-auto"
-                />
-              </Link>
+    <>
+      <header className="site-header bg-white relative z-50">
+        <div className="site-header_in max-w-6xl mx-auto px-4">
+          <div className="flex items-center justify-between py-4">
+            <div className="site-branding flex items-center gap-4">
+              <div className="site-logo">
+                <Link href="/" aria-label="Accueil">
+                  <img
+                    src="/images/logo-sans-fond-ni-date.png"
+                    alt="Crampous Mad"
+                    className="h-16 w-auto"
+                  />
+                </Link>
+              </div>
+
+              {/* Bouton hamburger pour mobile - masqué car navbar mobile globale */}
+              <div className="md:hidden">
+                {/* Espace réservé pour maintenir l'alignement */}
+              </div>
             </div>
 
-            <button
-              className="menu-toggle inline-flex items-center justify-center md:hidden text-[#262559]"
-              aria-controls="menu"
-              aria-expanded={open ? "true" : "false"}
-              onClick={() => setOpen((v) => !v)}
-            >
-              <span className="sr-only">Ouvrir le menu</span>
-              <span className="menu-toggle_item __left block h-[2px] w-6 bg-current" />
-              <span className="menu-toggle_item __middle block h-[2px] w-6 bg-current mx-1" />
-              <span className="menu-toggle_item __right block h-[2px] w-6 bg-current" />
-            </button>
-          </div>
-
-          <div id="site-navigation" className="main-navigation hidden md:block">
-            <nav className="main-menu" role="navigation">
-              <ul className="menu nav-menu flex items-center gap-2 text-[#262559] font-body">
-                <li>
-                  <Link href="/" className="hover:opacity-80 px-2" aria-current="page">
-                    Notre Crêperie
-                  </Link>
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-[#076993] transform rotate-45 mx-2"></div>
-                </li>
-                <li>
-                  <Link href="/blog" className="hover:opacity-80 px-2">
-                    L'actu
-                  </Link>
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-[#076993] transform rotate-45 mx-2"></div>
-                </li>
-                <li>
-                  <Link href="/reservation" className="hover:opacity-80 px-2">
-                    Réservation
-                  </Link>
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-[#076993] transform rotate-45 mx-2"></div>
-                </li>
-                <li>
-                  <Link href="/contactez-nous" className="hover:opacity-80 px-2">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+            {/* Navigation desktop */}
+            <div id="site-navigation" className="main-navigation hidden md:block">
+              <nav className="main-menu" role="navigation">
+                <ul className="menu nav-menu flex items-center text-[#262559] font-body">
+                  <li>
+                    <Link href="/notre-creperie" className="hover:opacity-80 px-2 py-2 transition-all duration-200 hover:bg-gray-50 rounded" aria-current="page">
+                      Notre Crêperie
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog" className="hover:opacity-80 px-2 py-2 transition-all duration-200 hover:bg-gray-50 rounded">
+                      L'actu
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/reservation" className="hover:opacity-80 px-2 py-2 transition-all duration-200 hover:bg-gray-50 rounded">
+                      Réservation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contactez-nous" className="hover:opacity-80 px-2 py-2 transition-all duration-200 hover:bg-gray-50 rounded">
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
+      </header>
 
-        {/* Mobile menu */}
-        <div
-          id="menu"
-          className={`${open ? "block" : "hidden"} md:hidden pb-4`}
-          aria-expanded={open ? "true" : "false"}
-        >
-          <nav role="navigation">
-            <ul className="menu nav-menu flex flex-col gap-3 text-[#262559] font-body">
-              <li>
-                <Link href="/" onClick={() => setOpen(false)} className="py-1">
-                  Notre Crêperie
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" onClick={() => setOpen(false)} className="py-1">
-                  L'actu
-                </Link>
-              </li>
-              <li>
-                <Link href="/reservation" onClick={() => setOpen(false)} className="py-1">
-                  Réservation
-                </Link>
-              </li>
-              <li>
-                <Link href="/contactez-nous" onClick={() => setOpen(false)} className="py-1">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+      {/* Menu mobile supprimé - géré par MobileNavbar globale */}
+    </>
   );
 }
 

@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import BottomSeparator from "../components/BottomSeparator";
+import ImageWithSeparators from "../components/ImageWithSeparators";
 
 export default function BlogPage() {
   const blogPosts = [
@@ -49,23 +51,25 @@ export default function BlogPage() {
   return (
     <main>
       {/* Header avec image de fond */}
-      <header className="relative h-[400px] w-full">
+      <header className="relative h-[300px] w-full">
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{ backgroundImage: `url('/images/bandeau_3-1.png')` }}
         />
         <div className="relative z-10 h-full flex flex-col items-center justify-center">
-          <h1 className="text-white text-4xl md:text-5xl font-display mb-6" style={{fontFamily: 'Berkshire Swash, serif'}}>
-            L'actu
-          </h1>
+                <h1 className="text-white text-4xl md:text-5xl font-cookie mb-6" style={{ fontSize: '60px', lineHeight: '70px' }}>
+                  Événements et actualités
+                </h1>
           
           {/* Barre avec losange */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-center">
             <div className="w-16 h-0.5 bg-white"></div>
             <div className="w-2 h-2 bg-white transform rotate-45 mx-4"></div>
             <div className="w-16 h-0.5 bg-white"></div>
           </div>
         </div>
+        {/* Séparateur en bas du header */}
+        <BottomSeparator color="#ffffff" overlay={true} />
       </header>
 
       {/* Section des articles de blog - Style identique à NewsSection */}
@@ -83,29 +87,29 @@ export default function BlogPage() {
                 
                 {/* Contenu avec design carré - flex pour aligner les boutons */}
                 <div className="p-4 flex flex-col flex-grow">
-                  <h3 className="text-lg font-body font-semibold mb-2 text-[#262559]" style={{ fontFamily: 'Lora, serif' }}>
-                    <Link href={post.href} className="hover:text-[#076993] transition-colors">
-                      {post.title}
-                    </Link>
-                  </h3>
+          <h3 className="text-xl font-lora font-bold mb-3 text-[#262559] leading-tight">
+            <Link href={post.href} className="hover:text-[#076993] transition-colors">
+              {post.title}
+            </Link>
+          </h3>
                   
                   {/* Date et heure */}
                   <div className="flex items-center justify-center mb-3">
                     <div className="w-6 h-0.5 bg-[#076993]"></div>
-                    <div className="px-2 text-xs text-[#076993] font-medium text-center">
+                    <div className="px-2 text-xs text-[#076993] font-open-sans font-medium text-center">
                       {post.date}<br/>{post.time}
                     </div>
                     <div className="w-6 h-0.5 bg-[#076993]"></div>
                   </div>
                   
-                  <p className="text-gray-600 text-sm mb-4 font-sans leading-relaxed flex-grow">
+                  <p className="text-gray-700 text-base mb-4 font-lora leading-relaxed flex-grow">
                     {post.excerpt}
                   </p>
                   
                   {/* Bouton carré avec style du site - aligné en bas */}
                   <Link 
                     href={post.href} 
-                    className="inline-block bg-[#262559] hover:bg-[#076993] text-white px-4 py-2 text-sm font-body font-medium transition-colors duration-300 border-2 border-[#262559] hover:border-[#076993] mt-auto"
+                    className="inline-block bg-[#262559] hover:bg-[#076993] text-white px-6 py-3 text-sm font-lora font-semibold transition-colors duration-300 border-2 border-[#262559] hover:border-[#076993] mt-auto"
                   >
                     Lire la suite
                   </Link>
@@ -116,19 +120,13 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Séparateur décoratif */}
-      <section className="relative">
-        <div className="w-full h-4 bg-[#076993]">
-          <svg className="w-full h-full" viewBox="0 0 100 15" preserveAspectRatio="none">
-            <defs>
-              <pattern id="separator-pattern" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
-                <path fillRule="evenodd" clipRule="evenodd" fill="#076993" d="M7.504-0.008l7.504,7.504L7.504,15L0,7.496L7.504-0.008z"></path>
-              </pattern>
-            </defs>
-            <rect x="0" y="0" width="100%" height="15" fill="url(#separator-pattern)"></rect>
-          </svg>
-        </div>
-      </section>
+      {/* Image de fond avec séparateurs en haut et en bas */}
+      <ImageWithSeparators 
+        imageSrc="/images/table-ronde-restaurent.jpg"
+        height="40vh"
+        minHeight="300px"
+        separatorColor="#ffffff"
+      />
     </main>
   );
 }
