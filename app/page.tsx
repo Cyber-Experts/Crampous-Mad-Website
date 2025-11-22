@@ -1,10 +1,7 @@
 import HeroSlider from "./components/HeroSlider";
 import Header from "./components/Header";
 import WelcomeSection from "./components/WelcomeSection";
-import ImageSection from "./components/ImageSection";
 import NewsSection from "./components/NewsSection";
-import TopSeparator from "./components/SectionSeparator";
-import BottomSeparator from "./components/BottomSeparator";
 import ImageWithSeparators from "./components/ImageWithSeparators";
 
 export default function Home() {
@@ -39,24 +36,24 @@ export default function Home() {
       </div>
 
       <WelcomeSection />
-      
-              {/* Image de fond après "Qui sommes-nous ?" avec séparateurs */}
-              <ImageWithSeparators 
-                imageSrc="/images/interieur-table.jpg"
-                height="70vh"
-                minHeight="500px"
-                separatorColor="#ffffff"
-              />
-              
-              <NewsSection />
-              
-              {/* Image de fond avec séparateurs en overlay */}
-              <ImageWithSeparators 
-                imageSrc="/images/table-ronde-restaurent.jpg"
-                height="70vh"
-                minHeight="500px"
-                separatorColor="#ffffff"
-              />
-      </main>
+
+      {/* Image de fond après "Qui sommes-nous ?" avec séparateurs */}
+      <ImageWithSeparators
+        imageSrc="/images/interieur-table.jpg"
+        height="70vh"
+        minHeight="500px"
+        separatorColor="#ffffff"
+      />
+
+      <NewsSection />
+
+      {/* Image de fond avec séparateurs en overlay */}
+      <ImageWithSeparators
+        imageSrc="/images/table-ronde-restaurent.jpg"
+        height="70vh"
+        minHeight="500px"
+        separatorColor="#ffffff"
+      />
+    </main>
   );
 }

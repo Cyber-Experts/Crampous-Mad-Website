@@ -11,6 +11,24 @@ interface StatItem {
   suffix?: string;
 }
 
+const stats: StatItem[] = [
+  {
+    icon: "Defaults-dashboard",
+    value: 35,
+    label: "années d'existence"
+  },
+  {
+    icon: "Defaults-cutlery",
+    value: 115,
+    label: "Couverts"
+  },
+  {
+    icon: "Defaults-thumbs-o-up",
+    value: 1000,
+    label: "Fans sur Facebook"
+  }
+];
+
 export default function CreperieChiffres() {
   const [isVisible, setIsVisible] = useState(false);
   const [counters, setCounters] = useState({
@@ -18,24 +36,6 @@ export default function CreperieChiffres() {
     covers: 0,
     fans: 0
   });
-
-  const stats: StatItem[] = [
-    {
-      icon: "Defaults-dashboard",
-      value: 35,
-      label: "années d'existence"
-    },
-    {
-      icon: "Defaults-cutlery",
-      value: 115,
-      label: "Couverts"
-    },
-    {
-      icon: "Defaults-thumbs-o-up",
-      value: 1000,
-      label: "Fans sur Facebook"
-    }
-  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -67,7 +67,7 @@ export default function CreperieChiffres() {
       const steps = 60; // 60 étapes pour une animation fluide
       const stepDuration = duration / steps;
 
-      stats.forEach((stat, index) => {
+      stats.forEach((stat) => {
         const targetValue = stat.value;
         const increment = targetValue / steps;
         let currentValue = 0;
@@ -106,8 +106,8 @@ export default function CreperieChiffres() {
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center bg-white/10 rounded-lg p-6 sm:p-8 backdrop-blur-sm">
+          {stats.map((stat) => (
+            <div key={stat.label} className="text-center bg-white/10 rounded-lg p-6 sm:p-8 backdrop-blur-sm">
               <div className="mb-4">
                 <div className="text-3xl sm:text-4xl mb-4">
                   <i className={stat.icon}></i>
